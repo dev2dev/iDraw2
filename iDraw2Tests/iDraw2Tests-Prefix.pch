@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iDraw2Tests' target in the 'iDraw2Tests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

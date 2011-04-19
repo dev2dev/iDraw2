@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB51BDD0135E0D8F00230A37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDCF135E0D8F00230A37 /* UIKit.framework */; };
+		CB51BDD2135E0D8F00230A37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD1135E0D8F00230A37 /* Foundation.framework */; };
+		CB51BDD4135E0D8F00230A37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */; };
+		CB51BDDA135E0D8F00230A37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDD8135E0D8F00230A37 /* InfoPlist.strings */; };
+		CB51BDDD135E0D8F00230A37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDDC135E0D8F00230A37 /* main.m */; };
+		CB51BDE0135E0D8F00230A37 /* iDraw2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDDF135E0D8F00230A37 /* iDraw2AppDelegate.m */; };
+		CB51BDE3135E0D8F00230A37 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDE1135E0D8F00230A37 /* MainWindow.xib */; };
+		CB51BDEA135E0D9000230A37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDCF135E0D8F00230A37 /* UIKit.framework */; };
+		CB51BDEB135E0D9000230A37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD1135E0D8F00230A37 /* Foundation.framework */; };
+		CB51BDEC135E0D9000230A37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */; };
+		CB51BDF4135E0D9000230A37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDF2135E0D9000230A37 /* InfoPlist.strings */; };
+		CB51BDF7135E0D9000230A37 /* iDraw2Tests.h in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */; };
+		CB51BDF9135E0D9000230A37 /* iDraw2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB51BDED135E0D9000230A37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB51BDC2135E0D8F00230A37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB51BDCA135E0D8F00230A37;
+			remoteInfo = iDraw2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB51BDCB135E0D8F00230A37 /* iDraw2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDraw2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB51BDCF135E0D8F00230A37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB51BDD1135E0D8F00230A37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB51BDD7135E0D8F00230A37 /* iDraw2-Info.plist */ = {isa = PBXFileReference; path = "iDraw2-Info.plist"; sourceTree = "<group>"; };
+		CB51BDD9135E0D8F00230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB51BDDB135E0D8F00230A37 /* iDraw2-Prefix.pch */ = {isa = PBXFileReference; path = "iDraw2-Prefix.pch"; sourceTree = "<group>"; };
+		CB51BDDC135E0D8F00230A37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB51BDDE135E0D8F00230A37 /* iDraw2AppDelegate.h */ = {isa = PBXFileReference; path = iDraw2AppDelegate.h; sourceTree = "<group>"; };
+		CB51BDDF135E0D8F00230A37 /* iDraw2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDraw2AppDelegate.m; sourceTree = "<group>"; };
+		CB51BDE2135E0D8F00230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CB51BDE9135E0D9000230A37 /* iDraw2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDraw2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB51BDF1135E0D9000230A37 /* iDraw2Tests-Info.plist */ = {isa = PBXFileReference; path = "iDraw2Tests-Info.plist"; sourceTree = "<group>"; };
+		CB51BDF3135E0D9000230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB51BDF5135E0D9000230A37 /* iDraw2Tests-Prefix.pch */ = {isa = PBXFileReference; path = "iDraw2Tests-Prefix.pch"; sourceTree = "<group>"; };
+		CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDraw2Tests.h; sourceTree = "<group>"; };
+		CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDraw2Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB51BDC8135E0D8F00230A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB51BDD0135E0D8F00230A37 /* UIKit.framework in Frameworks */,
+				CB51BDD2135E0D8F00230A37 /* Foundation.framework in Frameworks */,
+				CB51BDD4135E0D8F00230A37 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB51BDE5135E0D9000230A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB51BDEA135E0D9000230A37 /* UIKit.framework in Frameworks */,
+				CB51BDEB135E0D9000230A37 /* Foundation.framework in Frameworks */,
+				CB51BDEC135E0D9000230A37 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB51BDC0135E0D8F00230A37 = {
+			isa = PBXGroup;
+			children = (
+				CB51BDD5135E0D8F00230A37 /* iDraw2 */,
+				CB51BDEF135E0D9000230A37 /* iDraw2Tests */,
+				CB51BDCE135E0D8F00230A37 /* Frameworks */,
+				CB51BDCC135E0D8F00230A37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB51BDCC135E0D8F00230A37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB51BDCB135E0D8F00230A37 /* iDraw2.app */,
+				CB51BDE9135E0D9000230A37 /* iDraw2Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB51BDCE135E0D8F00230A37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB51BDCF135E0D8F00230A37 /* UIKit.framework */,
+				CB51BDD1135E0D8F00230A37 /* Foundation.framework */,
+				CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB51BDD5135E0D8F00230A37 /* iDraw2 */ = {
+			isa = PBXGroup;
+			children = (
+				CB51BDDE135E0D8F00230A37 /* iDraw2AppDelegate.h */,
+				CB51BDDF135E0D8F00230A37 /* iDraw2AppDelegate.m */,
+				CB51BDE1135E0D8F00230A37 /* MainWindow.xib */,
+				CB51BDD6135E0D8F00230A37 /* Supporting Files */,
+			);
+			path = iDraw2;
+			sourceTree = "<group>";
+		};
+		CB51BDD6135E0D8F00230A37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB51BDD7135E0D8F00230A37 /* iDraw2-Info.plist */,
+				CB51BDD8135E0D8F00230A37 /* InfoPlist.strings */,
+				CB51BDDB135E0D8F00230A37 /* iDraw2-Prefix.pch */,
+				CB51BDDC135E0D8F00230A37 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB51BDEF135E0D9000230A37 /* iDraw2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */,
+				CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */,
+				CB51BDF0135E0D9000230A37 /* Supporting Files */,
+			);
+			path = iDraw2Tests;
+			sourceTree = "<group>";
+		};
+		CB51BDF0135E0D9000230A37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB51BDF1135E0D9000230A37 /* iDraw2Tests-Info.plist */,
+				CB51BDF2135E0D9000230A37 /* InfoPlist.strings */,
+				CB51BDF5135E0D9000230A37 /* iDraw2Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB51BDCA135E0D8F00230A37 /* iDraw2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB51BDFC135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2" */;
+			buildPhases = (
+				CB51BDC7135E0D8F00230A37 /* Sources */,
+				CB51BDC8135E0D8F00230A37 /* Frameworks */,
+				CB51BDC9135E0D8F00230A37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iDraw2;
+			productName = iDraw2;
+			productReference = CB51BDCB135E0D8F00230A37 /* iDraw2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB51BDE8135E0D9000230A37 /* iDraw2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB51BDFF135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2Tests" */;
+			buildPhases = (
+				CB51BDE4135E0D9000230A37 /* Sources */,
+				CB51BDE5135E0D9000230A37 /* Frameworks */,
+				CB51BDE6135E0D9000230A37 /* Resources */,
+				CB51BDE7135E0D9000230A37 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB51BDEE135E0D9000230A37 /* PBXTargetDependency */,
+			);
+			name = iDraw2Tests;
+			productName = iDraw2Tests;
+			productReference = CB51BDE9135E0D9000230A37 /* iDraw2Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB51BDC2135E0D8F00230A37 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CB51BDC5135E0D8F00230A37 /* Build configuration list for PBXProject "iDraw2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CB51BDC0135E0D8F00230A37;
+			productRefGroup = CB51BDCC135E0D8F00230A37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB51BDCA135E0D8F00230A37 /* iDraw2 */,
+				CB51BDE8135E0D9000230A37 /* iDraw2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB51BDC9135E0D8F00230A37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB51BDDA135E0D8F00230A37 /* InfoPlist.strings in Resources */,
+				CB51BDE3135E0D8F00230A37 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB51BDE6135E0D9000230A37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB51BDF4135E0D9000230A37 /* InfoPlist.strings in Resources */,
+				CB51BDF7135E0D9000230A37 /* iDraw2Tests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB51BDE7135E0D9000230A37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB51BDC7135E0D8F00230A37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB51BDDD135E0D8F00230A37 /* main.m in Sources */,
+				CB51BDE0135E0D8F00230A37 /* iDraw2AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB51BDE4135E0D9000230A37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB51BDF9135E0D9000230A37 /* iDraw2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB51BDEE135E0D9000230A37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB51BDCA135E0D8F00230A37 /* iDraw2 */;
+			targetProxy = CB51BDED135E0D9000230A37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB51BDD8135E0D8F00230A37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB51BDD9135E0D8F00230A37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB51BDE1135E0D8F00230A37 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB51BDE2135E0D8F00230A37 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		CB51BDF2135E0D9000230A37 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB51BDF3135E0D9000230A37 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB51BDFA135E0D9000230A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB51BDFB135E0D9000230A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		CB51BDFD135E0D9000230A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDraw2/iDraw2-Prefix.pch";
+				INFOPLIST_FILE = "iDraw2/iDraw2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB51BDFE135E0D9000230A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDraw2/iDraw2-Prefix.pch";
+				INFOPLIST_FILE = "iDraw2/iDraw2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CB51BE00135E0D9000230A37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iDraw2.app/iDraw2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDraw2Tests/iDraw2Tests-Prefix.pch";
+				INFOPLIST_FILE = "iDraw2Tests/iDraw2Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CB51BE01135E0D9000230A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iDraw2.app/iDraw2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iDraw2Tests/iDraw2Tests-Prefix.pch";
+				INFOPLIST_FILE = "iDraw2Tests/iDraw2Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB51BDC5135E0D8F00230A37 /* Build configuration list for PBXProject "iDraw2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB51BDFA135E0D9000230A37 /* Debug */,
+				CB51BDFB135E0D9000230A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB51BDFC135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB51BDFD135E0D9000230A37 /* Debug */,
+				CB51BDFE135E0D9000230A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB51BDFF135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB51BE00135E0D9000230A37 /* Debug */,
+				CB51BE01135E0D9000230A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB51BDC2135E0D8F00230A37 /* Project object */;
+}
