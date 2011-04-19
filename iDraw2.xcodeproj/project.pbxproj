@@ -12,14 +12,34 @@
 		CB51BDD4135E0D8F00230A37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */; };
 		CB51BDDA135E0D8F00230A37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDD8135E0D8F00230A37 /* InfoPlist.strings */; };
 		CB51BDDD135E0D8F00230A37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDDC135E0D8F00230A37 /* main.m */; };
-		CB51BDE0135E0D8F00230A37 /* iDraw2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDDF135E0D8F00230A37 /* iDraw2AppDelegate.m */; };
-		CB51BDE3135E0D8F00230A37 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDE1135E0D8F00230A37 /* MainWindow.xib */; };
 		CB51BDEA135E0D9000230A37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDCF135E0D8F00230A37 /* UIKit.framework */; };
 		CB51BDEB135E0D9000230A37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD1135E0D8F00230A37 /* Foundation.framework */; };
 		CB51BDEC135E0D9000230A37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */; };
 		CB51BDF4135E0D9000230A37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDF2135E0D9000230A37 /* InfoPlist.strings */; };
 		CB51BDF7135E0D9000230A37 /* iDraw2Tests.h in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */; };
 		CB51BDF9135E0D9000230A37 /* iDraw2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */; };
+		CB51BE10135E0E1300230A37 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE09135E0E1300230A37 /* AppController.m */; };
+		CB51BE11135E0E1300230A37 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0A135E0E1300230A37 /* AsyncSocket.m */; };
+		CB51BE12135E0E1300230A37 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0B135E0E1300230A37 /* AsyncUdpSocket.m */; };
+		CB51BE13135E0E1300230A37 /* PaintingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0C135E0E1300230A37 /* PaintingView.m */; };
+		CB51BE14135E0E1300230A37 /* PaintingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0D135E0E1300230A37 /* PaintingWindow.m */; };
+		CB51BE15135E0E1300230A37 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0E135E0E1300230A37 /* QuartzView.m */; };
+		CB51BE16135E0E1300230A37 /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0F135E0E1300230A37 /* SoundEffect.m */; };
+		CB51BE20135E0E3E00230A37 /* blackbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE17135E0E3E00230A37 /* blackbackground.jpg */; };
+		CB51BE21135E0E3E00230A37 /* whitebackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE18135E0E3E00230A37 /* whitebackground.jpg */; };
+		CB51BE22135E0E3E00230A37 /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE19135E0E3E00230A37 /* Blue.png */; };
+		CB51BE23135E0E3E00230A37 /* Cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1A135E0E3E00230A37 /* Cyan.png */; };
+		CB51BE24135E0E3E00230A37 /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1B135E0E3E00230A37 /* Green.png */; };
+		CB51BE25135E0E3E00230A37 /* Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1C135E0E3E00230A37 /* Purple.png */; };
+		CB51BE26135E0E3E00230A37 /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1D135E0E3E00230A37 /* Red.png */; };
+		CB51BE27135E0E3E00230A37 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1E135E0E3E00230A37 /* White.png */; };
+		CB51BE28135E0E3E00230A37 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1F135E0E3E00230A37 /* Yellow.png */; };
+		CB51BE2C135E0E5700230A37 /* Erase.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE2A135E0E5700230A37 /* Erase.caf */; };
+		CB51BE2D135E0E5700230A37 /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE2B135E0E5700230A37 /* Select.caf */; };
+		CB51BE2F135E0E7300230A37 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BE2E135E0E7300230A37 /* CFNetwork.framework */; };
+		CB51BE31135E0E8200230A37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BE30135E0E8200230A37 /* QuartzCore.framework */; };
+		CB51BE33135E0E9200230A37 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BE32135E0E9200230A37 /* AudioToolbox.framework */; };
+		CB51BE36135E0EDC00230A37 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE34135E0EDC00230A37 /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,19 +57,45 @@
 		CB51BDCF135E0D8F00230A37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB51BDD1135E0D8F00230A37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CB51BDD7135E0D8F00230A37 /* iDraw2-Info.plist */ = {isa = PBXFileReference; path = "iDraw2-Info.plist"; sourceTree = "<group>"; };
+		CB51BDD7135E0D8F00230A37 /* iDraw2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDraw2-Info.plist"; sourceTree = "<group>"; };
 		CB51BDD9135E0D8F00230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB51BDDB135E0D8F00230A37 /* iDraw2-Prefix.pch */ = {isa = PBXFileReference; path = "iDraw2-Prefix.pch"; sourceTree = "<group>"; };
+		CB51BDDB135E0D8F00230A37 /* iDraw2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDraw2-Prefix.pch"; sourceTree = "<group>"; };
 		CB51BDDC135E0D8F00230A37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CB51BDDE135E0D8F00230A37 /* iDraw2AppDelegate.h */ = {isa = PBXFileReference; path = iDraw2AppDelegate.h; sourceTree = "<group>"; };
-		CB51BDDF135E0D8F00230A37 /* iDraw2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDraw2AppDelegate.m; sourceTree = "<group>"; };
-		CB51BDE2135E0D8F00230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		CB51BDE9135E0D9000230A37 /* iDraw2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDraw2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB51BDF1135E0D9000230A37 /* iDraw2Tests-Info.plist */ = {isa = PBXFileReference; path = "iDraw2Tests-Info.plist"; sourceTree = "<group>"; };
+		CB51BDF1135E0D9000230A37 /* iDraw2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDraw2Tests-Info.plist"; sourceTree = "<group>"; };
 		CB51BDF3135E0D9000230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB51BDF5135E0D9000230A37 /* iDraw2Tests-Prefix.pch */ = {isa = PBXFileReference; path = "iDraw2Tests-Prefix.pch"; sourceTree = "<group>"; };
+		CB51BDF5135E0D9000230A37 /* iDraw2Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDraw2Tests-Prefix.pch"; sourceTree = "<group>"; };
 		CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDraw2Tests.h; sourceTree = "<group>"; };
 		CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDraw2Tests.m; sourceTree = "<group>"; };
+		CB51BE02135E0E0800230A37 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		CB51BE03135E0E0800230A37 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		CB51BE04135E0E0800230A37 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		CB51BE05135E0E0800230A37 /* PaintingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintingView.h; sourceTree = "<group>"; };
+		CB51BE06135E0E0800230A37 /* PaintingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintingWindow.h; sourceTree = "<group>"; };
+		CB51BE07135E0E0800230A37 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
+		CB51BE08135E0E0800230A37 /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffect.h; sourceTree = "<group>"; };
+		CB51BE09135E0E1300230A37 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		CB51BE0A135E0E1300230A37 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		CB51BE0B135E0E1300230A37 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		CB51BE0C135E0E1300230A37 /* PaintingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintingView.m; sourceTree = "<group>"; };
+		CB51BE0D135E0E1300230A37 /* PaintingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintingWindow.m; sourceTree = "<group>"; };
+		CB51BE0E135E0E1300230A37 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
+		CB51BE0F135E0E1300230A37 /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffect.m; sourceTree = "<group>"; };
+		CB51BE17135E0E3E00230A37 /* blackbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackbackground.jpg; sourceTree = "<group>"; };
+		CB51BE18135E0E3E00230A37 /* whitebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whitebackground.jpg; sourceTree = "<group>"; };
+		CB51BE19135E0E3E00230A37 /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		CB51BE1A135E0E3E00230A37 /* Cyan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cyan.png; sourceTree = "<group>"; };
+		CB51BE1B135E0E3E00230A37 /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		CB51BE1C135E0E3E00230A37 /* Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Purple.png; sourceTree = "<group>"; };
+		CB51BE1D135E0E3E00230A37 /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
+		CB51BE1E135E0E3E00230A37 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
+		CB51BE1F135E0E3E00230A37 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		CB51BE2A135E0E5700230A37 /* Erase.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Erase.caf; sourceTree = "<group>"; };
+		CB51BE2B135E0E5700230A37 /* Select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Select.caf; sourceTree = "<group>"; };
+		CB51BE2E135E0E7300230A37 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CB51BE30135E0E8200230A37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CB51BE32135E0E9200230A37 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CB51BE35135E0EDC00230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB51BE33135E0E9200230A37 /* AudioToolbox.framework in Frameworks */,
+				CB51BE31135E0E8200230A37 /* QuartzCore.framework in Frameworks */,
+				CB51BE2F135E0E7300230A37 /* CFNetwork.framework in Frameworks */,
 				CB51BDD0135E0D8F00230A37 /* UIKit.framework in Frameworks */,
 				CB51BDD2135E0D8F00230A37 /* Foundation.framework in Frameworks */,
 				CB51BDD4135E0D8F00230A37 /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +147,9 @@
 		CB51BDCE135E0D8F00230A37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB51BE32135E0E9200230A37 /* AudioToolbox.framework */,
+				CB51BE30135E0E8200230A37 /* QuartzCore.framework */,
+				CB51BE2E135E0E7300230A37 /* CFNetwork.framework */,
 				CB51BDCF135E0D8F00230A37 /* UIKit.framework */,
 				CB51BDD1135E0D8F00230A37 /* Foundation.framework */,
 				CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */,
@@ -108,9 +160,21 @@
 		CB51BDD5135E0D8F00230A37 /* iDraw2 */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BDDE135E0D8F00230A37 /* iDraw2AppDelegate.h */,
-				CB51BDDF135E0D8F00230A37 /* iDraw2AppDelegate.m */,
-				CB51BDE1135E0D8F00230A37 /* MainWindow.xib */,
+				CB51BE29135E0E4200230A37 /* Resource */,
+				CB51BE09135E0E1300230A37 /* AppController.m */,
+				CB51BE0A135E0E1300230A37 /* AsyncSocket.m */,
+				CB51BE0B135E0E1300230A37 /* AsyncUdpSocket.m */,
+				CB51BE0C135E0E1300230A37 /* PaintingView.m */,
+				CB51BE0D135E0E1300230A37 /* PaintingWindow.m */,
+				CB51BE0E135E0E1300230A37 /* QuartzView.m */,
+				CB51BE0F135E0E1300230A37 /* SoundEffect.m */,
+				CB51BE02135E0E0800230A37 /* AppController.h */,
+				CB51BE03135E0E0800230A37 /* AsyncSocket.h */,
+				CB51BE04135E0E0800230A37 /* AsyncUdpSocket.h */,
+				CB51BE05135E0E0800230A37 /* PaintingView.h */,
+				CB51BE06135E0E0800230A37 /* PaintingWindow.h */,
+				CB51BE07135E0E0800230A37 /* QuartzView.h */,
+				CB51BE08135E0E0800230A37 /* SoundEffect.h */,
 				CB51BDD6135E0D8F00230A37 /* Supporting Files */,
 			);
 			path = iDraw2;
@@ -145,6 +209,25 @@
 				CB51BDF5135E0D9000230A37 /* iDraw2Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB51BE29135E0E4200230A37 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CB51BE34135E0EDC00230A37 /* MainWindow.xib */,
+				CB51BE2A135E0E5700230A37 /* Erase.caf */,
+				CB51BE2B135E0E5700230A37 /* Select.caf */,
+				CB51BE17135E0E3E00230A37 /* blackbackground.jpg */,
+				CB51BE18135E0E3E00230A37 /* whitebackground.jpg */,
+				CB51BE19135E0E3E00230A37 /* Blue.png */,
+				CB51BE1A135E0E3E00230A37 /* Cyan.png */,
+				CB51BE1B135E0E3E00230A37 /* Green.png */,
+				CB51BE1C135E0E3E00230A37 /* Purple.png */,
+				CB51BE1D135E0E3E00230A37 /* Red.png */,
+				CB51BE1E135E0E3E00230A37 /* White.png */,
+				CB51BE1F135E0E3E00230A37 /* Yellow.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +298,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB51BDDA135E0D8F00230A37 /* InfoPlist.strings in Resources */,
-				CB51BDE3135E0D8F00230A37 /* MainWindow.xib in Resources */,
+				CB51BE20135E0E3E00230A37 /* blackbackground.jpg in Resources */,
+				CB51BE21135E0E3E00230A37 /* whitebackground.jpg in Resources */,
+				CB51BE22135E0E3E00230A37 /* Blue.png in Resources */,
+				CB51BE23135E0E3E00230A37 /* Cyan.png in Resources */,
+				CB51BE24135E0E3E00230A37 /* Green.png in Resources */,
+				CB51BE25135E0E3E00230A37 /* Purple.png in Resources */,
+				CB51BE26135E0E3E00230A37 /* Red.png in Resources */,
+				CB51BE27135E0E3E00230A37 /* White.png in Resources */,
+				CB51BE28135E0E3E00230A37 /* Yellow.png in Resources */,
+				CB51BE2C135E0E5700230A37 /* Erase.caf in Resources */,
+				CB51BE2D135E0E5700230A37 /* Select.caf in Resources */,
+				CB51BE36135E0EDC00230A37 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB51BDDD135E0D8F00230A37 /* main.m in Sources */,
-				CB51BDE0135E0D8F00230A37 /* iDraw2AppDelegate.m in Sources */,
+				CB51BE10135E0E1300230A37 /* AppController.m in Sources */,
+				CB51BE11135E0E1300230A37 /* AsyncSocket.m in Sources */,
+				CB51BE12135E0E1300230A37 /* AsyncUdpSocket.m in Sources */,
+				CB51BE13135E0E1300230A37 /* PaintingView.m in Sources */,
+				CB51BE14135E0E1300230A37 /* PaintingWindow.m in Sources */,
+				CB51BE15135E0E1300230A37 /* QuartzView.m in Sources */,
+				CB51BE16135E0E1300230A37 /* SoundEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,20 +383,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CB51BDE1135E0D8F00230A37 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB51BDE2135E0D8F00230A37 /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
 		CB51BDF2135E0D9000230A37 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CB51BDF3135E0D9000230A37 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB51BE34135E0EDC00230A37 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB51BE35135E0EDC00230A37 /* en */,
+			);
+			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -314,7 +414,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -328,7 +428,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
@@ -343,6 +443,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iDraw2/iDraw2-Prefix.pch";
 				INFOPLIST_FILE = "iDraw2/iDraw2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -356,6 +457,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iDraw2/iDraw2-Prefix.pch";
 				INFOPLIST_FILE = "iDraw2/iDraw2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
