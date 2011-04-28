@@ -16,10 +16,13 @@
 
 // A class extension to declare private methods
 
+
+
 @interface PaintingView (private)
 - (void)touchesHandler:(CGFloat)x:(CGFloat)y;
 - (void)touchesMovedHandler:(CGFloat)x:(CGFloat)y;
 - (void)drawInContext:(CGContextRef)context;
+- (void)sendDataToMCUWithRedGreenBlue;
 @end
 
 @implementation PaintingView
@@ -59,6 +62,7 @@
         [self setRedSelected:NO];
         [self setGreenSelected:NO];
         [self setBlueSelected:NO];
+		udpSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
     }
     return self;
 }
@@ -96,6 +100,7 @@
     [self touchesMovedHandler:(double) currentLocation.x :(double) currentLocation.y];
     touchesMovedCount++;
     NSLog(@"NSNumber in moved %d", touchesMovedCount);
+    [self sendDataToMCUWithRedGreenBlue];
     [self setNeedsDisplay];
 }
 
@@ -115,6 +120,7 @@
     }
     touchesMovedCount = 0;
     NSLog(@"NSNumber %d", touchesMovedCount);
+    [self sendDataToMCUWithRedGreenBlue];
     [self setNeedsDisplay];
 }
 
@@ -165,31 +171,16 @@
                 break;
         }
         NSLog(@"x=%f, y=%f, tx=%f, ty=%f, dx=%d, dy=%d\n",x, y, tempX,tempY,dotX,dotY);  
-        if([self getRedSelected]){
-            if (matrixRed[dotX][dotY]) {
-                matrixRed[dotX][dotY] = NO;
-            }
-            else
+        if([self getRedSelected])
             matrixRed[dotX][dotY] = YES;
-        }
         else
             matrixRed[dotX][dotY] = NO;
-        if([self getGreenSelected]){
-            if (matrixGreen[dotX][dotY]) {
-                matrixGreen[dotX][dotY] = NO;
-            }
-            else
+        if([self getGreenSelected])
             matrixGreen[dotX][dotY] = YES;
-        }
         else
             matrixGreen[dotX][dotY] = NO;
-        if([self getBlueSelected]){
-            if (matrixBlue[dotX][dotY]) {
-                matrixBlue[dotX][dotY] = NO;
-            }
-            else
+        if([self getBlueSelected])
             matrixBlue[dotX][dotY] = YES;
-        }
         else
             matrixBlue[dotX][dotY] = NO;
     }
@@ -322,6 +313,123 @@
 
 - (BOOL)getBlueSelected{
     return [blueSelected boolValue];
+}
+
+- (void)sendDataToMCUWithRedGreenBlue
+{
+	unsigned char message[26];
+    unsigned char dataToSend[26];
+//    strcat(message, (char *)0x26);
+    message[0] = 0x26;
+    for(int y = 0; y < DOTMAXHEIGHT; y++){
+        if (matrixRed[0][y] == 1)
+            dataToSend[y+1] |= 0x80;
+        else
+            dataToSend[y+1] &= 0x7f;
+        if (matrixRed[1][y] == 1)
+            dataToSend[y+1] |= 0x40;
+        else
+            dataToSend[y+1] &= 0xbf;
+        if (matrixRed[2][y] == 1)
+            dataToSend[y+1] |= 0x20;
+        else
+            dataToSend[y+1] &= 0xdf;
+        if (matrixRed[3][y] == 1)
+            dataToSend[y+1] |= 0x10;
+        else
+            dataToSend[y+1] &= 0xef;
+        if (matrixRed[4][y] == 1)
+            dataToSend[y+1] |= 0x08;
+        else
+            dataToSend[y+1] &= 0xf7;
+        if (matrixRed[5][y] == 1)
+            dataToSend[y+1] |= 0x04;
+        else
+            dataToSend[y+1] &= 0xfb;
+        if (matrixRed[6][y] == 1)
+            dataToSend[y+1] |= 0x02;
+        else
+            dataToSend[y+1] &= 0xfd;
+        if (matrixRed[7][y] == 1)
+            dataToSend[y+1] |= 0x01;
+        else
+            dataToSend[y+1] &= 0xfe;
+        message[1+y]=dataToSend[y+1];
+    }
+    for(int y = 0; y < DOTMAXHEIGHT; y++){
+        if (matrixGreen[0][y] == 1)
+            dataToSend[y+1] |= 0x80;
+        else
+            dataToSend[y+1] &= 0x7f;
+        if (matrixGreen[1][y] == 1)
+            dataToSend[y+1] |= 0x40;
+        else
+            dataToSend[y+1] &= 0xbf;
+        if (matrixGreen[2][y] == 1)
+            dataToSend[y+1] |= 0x20;
+        else
+            dataToSend[y+1] &= 0xdf;
+        if (matrixGreen[3][y] == 1)
+            dataToSend[y+1] |= 0x10;
+        else
+            dataToSend[y+1] &= 0xef;
+        if (matrixGreen[4][y] == 1)
+            dataToSend[y+1] |= 0x08;
+        else
+            dataToSend[y+1] &= 0xf7;
+        if (matrixGreen[5][y] == 1)
+            dataToSend[y+1] |= 0x04;
+        else
+            dataToSend[y+1] &= 0xfb;
+        if (matrixGreen[6][y] == 1)
+            dataToSend[y+1] |= 0x02;
+        else
+            dataToSend[y+1] &= 0xfd;
+        if (matrixGreen[7][y] == 1)
+            dataToSend[y+1] |= 0x01;
+        else
+            dataToSend[y+1] &= 0xfe;
+        message[9+y]=dataToSend[y+1];
+    }
+    for(int y = 0; y < DOTMAXHEIGHT; y++){
+        if (matrixBlue[0][y] == 1)
+            dataToSend[y+1] |= 0x80;
+        else
+            dataToSend[y+1] &= 0x7f;
+        if (matrixBlue[1][y] == 1)
+            dataToSend[y+1] |= 0x40;
+        else
+            dataToSend[y+1] &= 0xbf;
+        if (matrixBlue[2][y] == 1)
+            dataToSend[y+1] |= 0x20;
+        else
+            dataToSend[y+1] &= 0xdf;
+        if (matrixBlue[3][y] == 1)
+            dataToSend[y+1] |= 0x10;
+        else
+            dataToSend[y+1] &= 0xef;
+        if (matrixBlue[4][y] == 1)
+            dataToSend[y+1] |= 0x08;
+        else
+            dataToSend[y+1] &= 0xf7;
+        if (matrixBlue[5][y] == 1)
+            dataToSend[y+1] |= 0x04;
+        else
+            dataToSend[y+1] &= 0xfb;
+        if (matrixBlue[6][y] == 1)
+            dataToSend[y+1] |= 0x02;
+        else
+            dataToSend[y+1] &= 0xfd;
+        if (matrixBlue[7][y] == 1)
+            dataToSend[y+1] |= 0x01;
+        else
+            dataToSend[y+1] &= 0xfe;
+        message[17+y]=dataToSend[y+1];
+    }
+    message[25]=0xff;
+    NSData *data = [NSData dataWithBytes:message length:sizeof(message)];
+    if(![udpSocket sendData:data toHost:DESTADDR port:7777 withTimeout:-1 tag:1])		
+        NSLog(@"Send failed.\n");
 }
 
 @end

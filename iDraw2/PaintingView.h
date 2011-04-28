@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "QuartzView.h"
+#import "AsyncUdpSocket.h"
 
 //CONSTANT
 
@@ -15,6 +16,9 @@
 #define DOTOFFSETX 30.0
 #define DOTOFFSETY 60.0
 #define DOTINTERVAL 32.0
+#define DOTMAXHEIGHT 8
+#define DOTMAXWIDTH 8
+#define	DESTADDR @"192.168.1.6"
 
 //CLASS INTERFACES:
 
@@ -30,6 +34,7 @@
     NSNumber *blueSelected;
     
     NSInteger touchesMovedCount;
+    AsyncUdpSocket *udpSocket;
 }
 
 @property (readwrite) BOOL matrixRed;
