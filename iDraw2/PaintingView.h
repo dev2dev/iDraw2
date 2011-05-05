@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QuartzView.h"
 #import "AsyncUdpSocket.h"
+#import "AppController.h"
+#import <QuartzCore/QuartzCore.h> 
 
 //CONSTANT
 
@@ -18,11 +19,19 @@
 #define DOTINTERVAL 32.0
 #define DOTMAXHEIGHT 8
 #define DOTMAXWIDTH 8
-#define	DESTADDR @"192.168.1.6"
+
+#define kPaletteHeight			30
+#define kPaletteSize			5
+#define kMinEraseInterval		0.1
+
+// Padding for margins
+#define kLeftMargin				10.0
+#define kTopMargin				60.0
+#define kRightMargin			10.0
 
 //CLASS INTERFACES:
 
-@interface PaintingView : QuartzView 
+@interface PaintingView : UIView 
 {
 @private
     BOOL matrixRed[8][8];

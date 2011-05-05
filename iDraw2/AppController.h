@@ -2,27 +2,17 @@
 //  iDraw2AppDelegate.h
 //  iDraw2
 //
-//  Created by Chris Cheung on 18/04/2011.
+//  Created by Chris Cheung on 06/05/2011.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#define DESTADDR @"192.168.1.101"
 
-@class PaintingWindow;
-@class PaintingView;
-@class SoundEffect;
-
-@interface AppController : NSObject <UIApplicationDelegate> {
-	PaintingWindow		*window;
-	PaintingView		*drawingView;
-    
-	SoundEffect			*erasingSound;
-	SoundEffect			*selectSound;
-	CFTimeInterval		lastTime;
+@interface iDraw2AppDelegate : NSObject <UIApplicationDelegate> {
+    UIWindow *windows;
 }
 
-@property (nonatomic, retain) IBOutlet PaintingWindow *window;
-@property (nonatomic, retain) IBOutlet PaintingView *drawingView;
-
+@property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @end

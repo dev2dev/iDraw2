@@ -6,7 +6,6 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
 #import "PaintingView.h"
 //#import "Matrix.h"
 
@@ -43,15 +42,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor grayColor];        
-    }
-    return self;
-}
-
-// initialize method when using nib
-- (id)initWithCoder:(NSCoder *)coder
-{
-    if ((self = [super initWithCoder:coder])) {
 		self.clearsContextBeforeDrawing = YES;
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"whitebackground.jpg"]];
         
@@ -63,13 +53,63 @@
         [self setGreenSelected:NO];
         [self setBlueSelected:NO];
 		udpSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
+        
+        CGRect rect = [[UIScreen mainScreen] applicationFrame];
+        // Create a segmented control so that the user can choose the brush color.
+        UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:
+                                                [NSArray arrayWithObjects:
+                                                 [UIImage imageNamed:@"Red.png"],
+                                                 [UIImage imageNamed:@"Yellow.png"],
+                                                 [UIImage imageNamed:@"Green.png"],
+                                                 [UIImage imageNamed:@"Blue.png"],
+                                                 [UIImage imageNamed:@"Cyan.png"],
+                                                 [UIImage imageNamed:@"Purple.png"],
+                                                 [UIImage imageNamed:@"White.png"],
+                                                 nil]];
+        
+        // Compute a rectangle that is positioned correctly for the segmented control you'll use as a brush color palette
+        CGRect frame = CGRectMake(rect.origin.x + kLeftMargin, rect.size.height - kPaletteHeight - kTopMargin, rect.size.width - (kLeftMargin + kRightMargin), kPaletteHeight);
+        segmentedControl.frame = frame;
+        // When the user chooses a color, the method changeBrushColor: is called.
+        [segmentedControl addTarget:self action:@selector(changeBrushColor:) forControlEvents:UIControlEventValueChanged];
+        segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+        // Make sure the color of the color complements the black background
+        segmentedControl.tintColor = [UIColor darkGrayColor];
+        // Set the third color (index values start at 0)
+        segmentedControl.selectedSegmentIndex = 3;
+        
+        // Add the control to the window
+//        [window addSubview:segmentedControl];
+        [self addSubview:segmentedControl];
+        // Now that the control is added, you can release it
+        [segmentedControl release];
     }
     return self;
 }
 
+// initialize method when using nib
+//- (id)initWithCoder:(NSCoder *)coder
+//{
+//    if ((self = [super initWithCoder:coder])) {
+//		self.clearsContextBeforeDrawing = YES;
+//        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"whitebackground.jpg"]];
+//        
+//        // init matrix contents
+//        memset(matrixRed, 0, 64);
+//        memset(matrixGreen, 0, 64);
+//        memset(matrixBlue, 0, 64);
+//        [self setRedSelected:NO];
+//        [self setGreenSelected:NO];
+//        [self setBlueSelected:NO];
+//		udpSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
+//    }
+//    return self;
+//}
+
 
 #pragma mark Draw Method
-- (void)drawInContext:(CGContextRef)context{
+- (void)drawRect:(CGRect)rect {
+	CGContextRef context = UIGraphicsGetCurrentContext();
     NSLog(@"drawInContext");
     // CGContextRef context = UIGraphicsGetCurrentContext();
 	// Drawing with a white stroke color
@@ -430,6 +470,66 @@
     NSData *data = [NSData dataWithBytes:message length:sizeof(message)];
     if(![udpSocket sendData:data toHost:DESTADDR port:7777 withTimeout:-1 tag:1])		
         NSLog(@"Send failed.\n");
+}
+
+#pragma segmentedControl Event
+// Change the brush color
+- (void)changeBrushColor:(id)sender
+{
+    BOOL red, green, blue;
+    NSLog(@"changeBrushColor index = %d", [sender selectedSegmentIndex]);
+	// Play sound
+ 	//[selectSound play];
+    switch ([sender selectedSegmentIndex]) {
+            // Red Segment selected
+        case 0:
+            red = YES;
+            green = NO;
+            blue = NO;
+            break;
+            // Yellow Segment selected
+        case 1:
+            red = YES;
+            green = YES;
+            blue = NO;
+            break;
+            // Green Segment selected
+        case 2:
+            red = NO;
+            green = YES;
+            blue = NO;
+            break;
+            // Blue Segment selected
+        case 3:
+            red = NO;
+            green = NO;
+            blue = YES;
+            break;
+            // Cyan Segment selected
+        case 4:
+            red = NO;
+            green = YES;
+            blue = YES;
+            break;
+            // Purple Segment selected
+        case 5:
+            red = YES;
+            green = NO;
+            blue = YES;
+            break;
+            // White Segment selected
+        case 6:
+            red = YES;
+            green = YES;
+            blue = YES;
+            break;
+        default:
+            red = NO;
+            green = NO;
+            blue = NO;
+            break;
+    }	
+    [self setBrushColorWithRed:red green:green blue:blue];
 }
 
 @end
