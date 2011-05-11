@@ -7,6 +7,8 @@
 //
 
 #import "PaintingView.h"
+#import <netinet/in.h>
+#import <arpa/inet.h>
 //#import "Matrix.h"
 
 //#import <stdlib.h>
@@ -43,7 +45,6 @@
     if (self) {
         // Initialization code
 		self.clearsContextBeforeDrawing = YES;
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"whitebackground.jpg"]];
         
         // init matrix contents
         memset(matrixRed, 0, 64);
@@ -52,6 +53,15 @@
         [self setRedSelected:NO];
         [self setGreenSelected:NO];
         [self setBlueSelected:NO];
+        // Create an empty array 
+        netServices = [[NSMutableArray alloc] init]; 
+        // Create a net service browser 
+        serviceBrowser = [[NSNetServiceBrowser alloc] init];
+        
+        // As the delegate, you will be told when services are found 
+        [serviceBrowser setDelegate:self]; 
+        [serviceBrowser searchForServicesOfType:DESTSERV inDomain:@""];
+
 		udpSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
         
         CGRect rect = [[UIScreen mainScreen] applicationFrame];
@@ -105,6 +115,65 @@
 //    }
 //    return self;
 //}
+
+#pragma bonjour service
+
+- (void)netServiceBrowser:(NSNetServiceBrowser *)browser 
+           didFindService:(NSNetService *)aNetService 
+               moreComing:(BOOL)moreComing 
+{ 
+    NSLog(@"adding %@", aNetService); 
+    // Add it to the array 
+    [netServices addObject:aNetService]; 
+    // Update the interface 
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:[netServices count] - 1 
+                                         inSection:0]; 
+    // Start resolution to get TXT record 
+    [aNetService setDelegate:self]; 
+    [aNetService resolveWithTimeout:30]; 
+} 
+- (void)netServiceDidResolveAddress:(NSNetService *)sender 
+{ 
+    // What row just resolved? 
+    int row = [netServices indexOfObjectIdenticalTo:sender]; 
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:row inSection:0]; 
+    NSArray *ips = [NSArray arrayWithObject:ip]; 
+    
+	NSArray *addrs = [sender addresses];
+	if([addrs count] > 0)
+	{
+        mcuAddress = nil;
+		NSData *firstAddress = [addrs objectAtIndex:0];
+		const struct sockaddr_in *addy = [firstAddress bytes];
+		char *str = inet_ntoa(addy->sin_addr);
+		NSLog(@"%s:%d", str, ntohs(addy->sin_port));
+        mcuAddress = [[NSString alloc] initWithCString:str encoding:NSASCIIStringEncoding];
+        mcuPort = ntohs(addy->sin_port);
+		NSLog(@"new ip: %@:%d", mcuAddress, mcuPort);
+        NSString *amsg = [[NSString alloc] initWithFormat:@"Target Board Found (%@%@local) with IP Address: %@",DESTADDR, DESTSERV, mcuAddress]; 
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"NetService" message:amsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+        
+	}
+}
+// Called when services are lost 
+- (void)netServiceBrowser:(NSNetServiceBrowser *)browser 
+         didRemoveService:(NSNetService *)aNetService 
+               moreComing:(BOOL)moreComing 
+{ 
+    NSLog(@"removing %@", aNetService); 
+    // Take it out of the array 
+    NSUInteger row = [netServices indexOfObject:aNetService]; 
+    if (row == NSNotFound) { 
+        NSLog(@"unable to find the service in %@", netServices); 
+        return; 
+    } 
+    [netServices removeObjectAtIndex:row]; 
+    // Update the interface 
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:row inSection:0]; 
+} 
+
 
 
 #pragma mark Draw Method
@@ -468,7 +537,7 @@
     }
     message[25]=0xff;
     NSData *data = [NSData dataWithBytes:message length:sizeof(message)];
-    if(![udpSocket sendData:data toHost:DESTADDR port:7777 withTimeout:-1 tag:1])		
+    if(![udpSocket sendData:data toHost:mcuAddress port:mcuPort withTimeout:-1 tag:1])		
         NSLog(@"Send failed.\n");
 }
 

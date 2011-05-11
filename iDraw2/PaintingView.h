@@ -31,7 +31,7 @@
 
 //CLASS INTERFACES:
 
-@interface PaintingView : UIView 
+@interface PaintingView : UIView <NSNetServiceDelegate, NSNetServiceBrowserDelegate> 
 {
 @private
     BOOL matrixRed[8][8];
@@ -44,6 +44,11 @@
     
     NSInteger touchesMovedCount;
     AsyncUdpSocket *udpSocket;
+    NSNetServiceBrowser *serviceBrowser;
+    NSMutableArray *netServices; 
+    
+    NSString *mcuAddress;
+    int mcuPort;
 }
 
 @property (readwrite) BOOL matrixRed;

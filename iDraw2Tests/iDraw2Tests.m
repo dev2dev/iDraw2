@@ -2,7 +2,7 @@
 //  iDraw2Tests.m
 //  iDraw2Tests
 //
-//  Created by Chris Cheung on 20/04/2011.
+//  Created by Chris Cheung on 06/05/2011.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#define DESTADDR @"192.168.1.101"
+#define DESTSERV @"_idraw._udp."
+#define DESTADDR @"MCHPPIC18."
 
 @interface iDraw2AppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *windows;

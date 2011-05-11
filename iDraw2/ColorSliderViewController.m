@@ -23,6 +23,8 @@
         
         // Give it a label
         [tbi setTitle:@"Slider"];
+        UIImage *i = [UIImage imageNamed:@"Chat-Bubble.png"];
+        [tbi setImage:i];
     }
     return self;
 }

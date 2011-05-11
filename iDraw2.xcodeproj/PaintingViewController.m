@@ -22,6 +22,8 @@
         
         // Give it a label
         [tbi setTitle:@"Paint"];
+        UIImage *i = [UIImage imageNamed:@"Magic-Wand.png"];
+        [tbi setImage:i];
     }
     return self;
 }
@@ -46,7 +48,7 @@
 - (void)loadView
 {
 	PaintingView *pv = [[PaintingView alloc] initWithFrame:CGRectZero];
-	[pv setBackgroundColor:[UIColor whiteColor]];
+	[pv setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"whitebackground.jpg"]]];
 	[self setView:pv];
 	[pv release];
 }
