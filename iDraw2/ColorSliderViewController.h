@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AsyncUdpSocket.h"
 #import "AppController.h"
+#import "SingletonData.h"
 
 @interface ColorSliderViewController : UIViewController {
 	AsyncUdpSocket *udpSocket;
@@ -22,6 +23,10 @@
 	IBOutlet UISlider *redColorSlider;
 	IBOutlet UISlider *greenColorSlider;
 	IBOutlet UISlider *blueColorSlider;
+    
+    SingletonData *s;
+    NSString *mcuAddress;
+    int mcuPort;
 }
 
 

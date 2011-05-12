@@ -9,6 +9,7 @@
 #import "PaintingView.h"
 #import <netinet/in.h>
 #import <arpa/inet.h>
+#import "SingletonData.h"
 //#import "Matrix.h"
 
 //#import <stdlib.h>
@@ -28,9 +29,8 @@
 
 @implementation PaintingView
 
-@synthesize matrixRed=_matrixRed;
-@synthesize matrixGreen=_matrixGreen;
-@synthesize matrixBlue=_matrixBlue;
+@synthesize matrixData=_matrixData;
+@synthesize matrixBackup=_matrixBackup;
 @synthesize redSelected;
 @synthesize greenSelected;
 @synthesize blueSelected;
@@ -47,12 +47,13 @@
 		self.clearsContextBeforeDrawing = YES;
         
         // init matrix contents
-        memset(matrixRed, 0, 64);
-        memset(matrixGreen, 0, 64);
-        memset(matrixBlue, 0, 64);
         [self setRedSelected:NO];
         [self setGreenSelected:NO];
         [self setBlueSelected:NO];
+        
+        memset(&matrixData, 0, sizeof(matrix));
+        memset(&matrixBackup, 0, sizeof(matrix));
+        firstSend = YES;
         // Create an empty array 
         netServices = [[NSMutableArray alloc] init]; 
         // Create a net service browser 
@@ -63,7 +64,7 @@
         [serviceBrowser searchForServicesOfType:DESTSERV inDomain:@""];
 
 		udpSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
-        
+        s = [SingletonData instance];
         CGRect rect = [[UIScreen mainScreen] applicationFrame];
         // Create a segmented control so that the user can choose the brush color.
         UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:
@@ -88,8 +89,6 @@
         // Set the third color (index values start at 0)
         segmentedControl.selectedSegmentIndex = 3;
         
-        // Add the control to the window
-//        [window addSubview:segmentedControl];
         [self addSubview:segmentedControl];
         // Now that the control is added, you can release it
         [segmentedControl release];
@@ -105,9 +104,9 @@
 //        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"whitebackground.jpg"]];
 //        
 //        // init matrix contents
-//        memset(matrixRed, 0, 64);
-//        memset(matrixGreen, 0, 64);
-//        memset(matrixBlue, 0, 64);
+//        memset(matrixData.Red, 0, 64);
+//        memset(matrixData.Green, 0, 64);
+//        memset(matrixData.Blue, 0, 64);
 //        [self setRedSelected:NO];
 //        [self setGreenSelected:NO];
 //        [self setBlueSelected:NO];
@@ -142,14 +141,14 @@
 	NSArray *addrs = [sender addresses];
 	if([addrs count] > 0)
 	{
-        mcuAddress = nil;
 		NSData *firstAddress = [addrs objectAtIndex:0];
 		const struct sockaddr_in *addy = [firstAddress bytes];
 		char *str = inet_ntoa(addy->sin_addr);
 		NSLog(@"%s:%d", str, ntohs(addy->sin_port));
-        mcuAddress = [[NSString alloc] initWithCString:str encoding:NSASCIIStringEncoding];
-        mcuPort = ntohs(addy->sin_port);
-		NSLog(@"new ip: %@:%d", mcuAddress, mcuPort);
+        
+        SingletonData *sl = [SingletonData instance];
+        [sl setIpAddress: str];
+        [sl setPort:ntohs(addy->sin_port)];
         NSString *amsg = [[NSString alloc] initWithFormat:@"Target Board Found (%@%@local) with IP Address: %@",DESTADDR, DESTSERV, mcuAddress]; 
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"NetService" message:amsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
@@ -190,7 +189,7 @@
 	// Fill rect convenience equivalent to AddEllipseInRect(); FillPath();
     for (int x = 0; x < 8; x++) {
         for (int y = 0; y < 8; y++) {
-            CGContextSetRGBFillColor(context, matrixRed[x][y]?1.0:0.3, matrixGreen[x][y]?1.0:0.3, matrixBlue[x][y]?1.0:0.3, 1.0);
+            CGContextSetRGBFillColor(context, matrixData.Red[x][y]?1.0:0.3, matrixData.Green[x][y]?1.0:0.3, matrixData.Blue[x][y]?1.0:0.3, 1.0);
             CGContextFillEllipseInRect(context, CGRectMake(DOTOFFSETX + DOTINTERVAL * x ,DOTOFFSETY +  DOTINTERVAL * y, DOTRADIUS, DOTRADIUS));
         }
     }
@@ -198,23 +197,23 @@
 
 #pragma mark Touch Event Handler
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesBegan");
+    //NSLog(@"touchesBegan");
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesMoved");
+    //NSLog(@"touchesMoved");
     UITouch *touch = [touches anyObject];
     CGPoint currentLocation = [touch locationInView:[touch view]];
-    NSLog(@"x=%f,y=%f",currentLocation.x,currentLocation.y);
+    //NSLog(@"x=%f,y=%f",currentLocation.x,currentLocation.y);
     [self touchesMovedHandler:(double) currentLocation.x :(double) currentLocation.y];
     touchesMovedCount++;
-    NSLog(@"NSNumber in moved %d", touchesMovedCount);
+    //NSLog(@"NSNumber in moved %d", touchesMovedCount);
     [self sendDataToMCUWithRedGreenBlue];
     [self setNeedsDisplay];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesEnded");
+    //NSLog(@"touchesEnded");
     UITouch *touch = [touches anyObject];
     CGPoint currentLocation = [touch locationInView:[touch view]];
     if ([[touches anyObject] tapCount] == 4) {
@@ -224,17 +223,17 @@
         [self touchesMovedHandler:currentLocation.x :currentLocation.y];
     }
     else{
-        NSLog(@"x=%f,y=%f",currentLocation.x,currentLocation.y);
+        //NSLog(@"x=%f,y=%f",currentLocation.x,currentLocation.y);
         [self touchesHandler:currentLocation.x :currentLocation.y];
     }
     touchesMovedCount = 0;
-    NSLog(@"NSNumber %d", touchesMovedCount);
+    //NSLog(@"NSNumber %d", touchesMovedCount);
     [self sendDataToMCUWithRedGreenBlue];
     [self setNeedsDisplay];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesCancelled");
+    //NSLog(@"touchesCancelled");
 }
 - (void)touchesHandler:(CGFloat)x :(CGFloat)y{
     if((x > 32.0 && x < 287.0) && (y > 62.0 && y < 313.0)){
@@ -279,19 +278,19 @@
                 dotY--;
                 break;
         }
-        NSLog(@"x=%f, y=%f, tx=%f, ty=%f, dx=%d, dy=%d\n",x, y, tempX,tempY,dotX,dotY);  
+        //NSLog(@"x=%f, y=%f, tx=%f, ty=%f, dx=%d, dy=%d\n",x, y, tempX,tempY,dotX,dotY);  
         if([self getRedSelected])
-            matrixRed[dotX][dotY] = YES;
+            matrixData.Red[dotX][dotY] = YES;
         else
-            matrixRed[dotX][dotY] = NO;
+            matrixData.Red[dotX][dotY] = NO;
         if([self getGreenSelected])
-            matrixGreen[dotX][dotY] = YES;
+            matrixData.Green[dotX][dotY] = YES;
         else
-            matrixGreen[dotX][dotY] = NO;
+            matrixData.Green[dotX][dotY] = NO;
         if([self getBlueSelected])
-            matrixBlue[dotX][dotY] = YES;
+            matrixData.Blue[dotX][dotY] = YES;
         else
-            matrixBlue[dotX][dotY] = NO;
+            matrixData.Blue[dotX][dotY] = NO;
     }
 }
 
@@ -340,21 +339,21 @@
                 dotY--;
                 break;
         }
-        NSLog(@"x=%f, y=%f, tx=%f, ty=%f, dx=%d, dy=%d\n",x, y, tempX,tempY,dotX,dotY);  
+        //NSLog(@"x=%f, y=%f, tx=%f, ty=%f, dx=%d, dy=%d\n",x, y, tempX,tempY,dotX,dotY);  
         
         // map adjusted coordinates to matrix
         if([self getRedSelected])
-            matrixRed[dotX][dotY] = YES;
+            matrixData.Red[dotX][dotY] = YES;
         else
-            matrixRed[dotX][dotY] = NO;
+            matrixData.Red[dotX][dotY] = NO;
         if([self getGreenSelected])
-            matrixGreen[dotX][dotY] = YES;
+            matrixData.Green[dotX][dotY] = YES;
         else
-            matrixGreen[dotX][dotY] = NO;
+            matrixData.Green[dotX][dotY] = NO;
         if([self getBlueSelected])
-            matrixBlue[dotX][dotY] = YES;
+            matrixData.Blue[dotX][dotY] = YES;
         else
-            matrixBlue[dotX][dotY] = NO;
+            matrixData.Blue[dotX][dotY] = NO;
     }
 }
 
@@ -369,9 +368,9 @@
 
 - (void)erase{
     NSLog(@"Triple Tap");
-    memset(matrixRed, 0, 64);
-    memset(matrixGreen, 0, 64);
-    memset(matrixBlue, 0, 64);
+    memset(matrixData.Red, 0, 64);
+    memset(matrixData.Green, 0, 64);
+    memset(matrixData.Blue, 0, 64);
 }
 
 - (void)dealloc
@@ -428,117 +427,123 @@
 {
 	unsigned char message[26];
     unsigned char dataToSend[26];
-//    strcat(message, (char *)0x26);
     message[0] = 0x26;
     for(int y = 0; y < DOTMAXHEIGHT; y++){
-        if (matrixRed[0][y] == 1)
+        if (matrixData.Red[0][y] == 1)
             dataToSend[y+1] |= 0x80;
         else
             dataToSend[y+1] &= 0x7f;
-        if (matrixRed[1][y] == 1)
+        if (matrixData.Red[1][y] == 1)
             dataToSend[y+1] |= 0x40;
         else
             dataToSend[y+1] &= 0xbf;
-        if (matrixRed[2][y] == 1)
+        if (matrixData.Red[2][y] == 1)
             dataToSend[y+1] |= 0x20;
         else
             dataToSend[y+1] &= 0xdf;
-        if (matrixRed[3][y] == 1)
+        if (matrixData.Red[3][y] == 1)
             dataToSend[y+1] |= 0x10;
         else
             dataToSend[y+1] &= 0xef;
-        if (matrixRed[4][y] == 1)
+        if (matrixData.Red[4][y] == 1)
             dataToSend[y+1] |= 0x08;
         else
             dataToSend[y+1] &= 0xf7;
-        if (matrixRed[5][y] == 1)
+        if (matrixData.Red[5][y] == 1)
             dataToSend[y+1] |= 0x04;
         else
             dataToSend[y+1] &= 0xfb;
-        if (matrixRed[6][y] == 1)
+        if (matrixData.Red[6][y] == 1)
             dataToSend[y+1] |= 0x02;
         else
             dataToSend[y+1] &= 0xfd;
-        if (matrixRed[7][y] == 1)
+        if (matrixData.Red[7][y] == 1)
             dataToSend[y+1] |= 0x01;
         else
             dataToSend[y+1] &= 0xfe;
         message[1+y]=dataToSend[y+1];
     }
     for(int y = 0; y < DOTMAXHEIGHT; y++){
-        if (matrixGreen[0][y] == 1)
+        if (matrixData.Green[0][y] == 1)
             dataToSend[y+1] |= 0x80;
         else
             dataToSend[y+1] &= 0x7f;
-        if (matrixGreen[1][y] == 1)
+        if (matrixData.Green[1][y] == 1)
             dataToSend[y+1] |= 0x40;
         else
             dataToSend[y+1] &= 0xbf;
-        if (matrixGreen[2][y] == 1)
+        if (matrixData.Green[2][y] == 1)
             dataToSend[y+1] |= 0x20;
         else
             dataToSend[y+1] &= 0xdf;
-        if (matrixGreen[3][y] == 1)
+        if (matrixData.Green[3][y] == 1)
             dataToSend[y+1] |= 0x10;
         else
             dataToSend[y+1] &= 0xef;
-        if (matrixGreen[4][y] == 1)
+        if (matrixData.Green[4][y] == 1)
             dataToSend[y+1] |= 0x08;
         else
             dataToSend[y+1] &= 0xf7;
-        if (matrixGreen[5][y] == 1)
+        if (matrixData.Green[5][y] == 1)
             dataToSend[y+1] |= 0x04;
         else
             dataToSend[y+1] &= 0xfb;
-        if (matrixGreen[6][y] == 1)
+        if (matrixData.Green[6][y] == 1)
             dataToSend[y+1] |= 0x02;
         else
             dataToSend[y+1] &= 0xfd;
-        if (matrixGreen[7][y] == 1)
+        if (matrixData.Green[7][y] == 1)
             dataToSend[y+1] |= 0x01;
         else
             dataToSend[y+1] &= 0xfe;
         message[9+y]=dataToSend[y+1];
     }
     for(int y = 0; y < DOTMAXHEIGHT; y++){
-        if (matrixBlue[0][y] == 1)
+        if (matrixData.Blue[0][y] == 1)
             dataToSend[y+1] |= 0x80;
         else
             dataToSend[y+1] &= 0x7f;
-        if (matrixBlue[1][y] == 1)
+        if (matrixData.Blue[1][y] == 1)
             dataToSend[y+1] |= 0x40;
         else
             dataToSend[y+1] &= 0xbf;
-        if (matrixBlue[2][y] == 1)
+        if (matrixData.Blue[2][y] == 1)
             dataToSend[y+1] |= 0x20;
         else
             dataToSend[y+1] &= 0xdf;
-        if (matrixBlue[3][y] == 1)
+        if (matrixData.Blue[3][y] == 1)
             dataToSend[y+1] |= 0x10;
         else
             dataToSend[y+1] &= 0xef;
-        if (matrixBlue[4][y] == 1)
+        if (matrixData.Blue[4][y] == 1)
             dataToSend[y+1] |= 0x08;
         else
             dataToSend[y+1] &= 0xf7;
-        if (matrixBlue[5][y] == 1)
+        if (matrixData.Blue[5][y] == 1)
             dataToSend[y+1] |= 0x04;
         else
             dataToSend[y+1] &= 0xfb;
-        if (matrixBlue[6][y] == 1)
+        if (matrixData.Blue[6][y] == 1)
             dataToSend[y+1] |= 0x02;
         else
             dataToSend[y+1] &= 0xfd;
-        if (matrixBlue[7][y] == 1)
+        if (matrixData.Blue[7][y] == 1)
             dataToSend[y+1] |= 0x01;
         else
             dataToSend[y+1] &= 0xfe;
         message[17+y]=dataToSend[y+1];
     }
     message[25]=0xff;
-    NSData *data = [NSData dataWithBytes:message length:sizeof(message)];
-    if(![udpSocket sendData:data toHost:mcuAddress port:mcuPort withTimeout:-1 tag:1])		
-        NSLog(@"Send failed.\n");
+    if (memcmp(&matrixData, &matrixBackup, sizeof(matrix)) || firstSend == YES) {
+        firstSend = NO;
+        memcpy(&matrixBackup, &matrixData, sizeof(matrix));
+        NSData *data = [NSData dataWithBytes:message length:sizeof(message)];
+        mcuAddress = nil;
+        mcuAddress = [[NSString alloc] initWithCString:[s getIpAddress] encoding:NSASCIIStringEncoding];
+        mcuPort = [s getPort];
+        if(![udpSocket sendData:data toHost:mcuAddress port:mcuPort withTimeout:-1 tag:1])		
+            NSLog(@"Send failed.\n");
+    }
 }
 
 #pragma segmentedControl Event

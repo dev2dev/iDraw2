@@ -7,6 +7,7 @@
 //
 
 #import "ColorSliderViewController.h"
+#import "SingletonData.h"
 
 
 @implementation ColorSliderViewController
@@ -17,7 +18,7 @@
     if (self) {
         // Custom initialization
 		udpSocket = [[AsyncUdpSocket alloc] initWithDelegate:self];
-        
+        s = [SingletonData instance];
         // Get the tab bar item
         UITabBarItem *tbi = [self tabBarItem];
         
@@ -66,7 +67,10 @@
 			dataToSend[1] = valueInInt;
 		}
 		NSData *data = [NSData dataWithBytes:dataToSend length:sizeof(dataToSend)];
-		if(![udpSocket sendData:data toHost:DESTADDR port:7777 withTimeout:-1 tag:1])		
+        mcuAddress = nil;
+        mcuAddress = [[NSString alloc] initWithCString:[s getIpAddress] encoding:NSASCIIStringEncoding];
+        mcuPort = [s getPort];
+		if(![udpSocket sendData:data toHost:mcuAddress port:mcuPort withTimeout:-1 tag:1])		
 			NSLog(@"Send failed.\n");
 	}
 	
@@ -92,7 +96,10 @@
 			dataToSend[1] = valueInInt;
 		}
 		NSData *data = [NSData dataWithBytes:dataToSend length:sizeof(dataToSend)];
-		if(![udpSocket sendData:data toHost:DESTADDR port:7777 withTimeout:-1 tag:1])		
+        mcuAddress = nil;
+        mcuAddress = [[NSString alloc] initWithCString:[s getIpAddress] encoding:NSASCIIStringEncoding];
+        mcuPort = [s getPort];
+		if(![udpSocket sendData:data toHost:mcuAddress port:mcuPort withTimeout:-1 tag:1])		
 			NSLog(@"Send failed.\n");
 	}
 	
@@ -118,7 +125,10 @@
 			dataToSend[1] = valueInInt;
 		}
 		NSData *data = [NSData dataWithBytes:dataToSend length:sizeof(dataToSend)];
-		if(![udpSocket sendData:data toHost:DESTADDR port:7777 withTimeout:-1 tag:1])		
+        mcuAddress = nil;
+        mcuAddress = [[NSString alloc] initWithCString:[s getIpAddress] encoding:NSASCIIStringEncoding];
+        mcuPort = [s getPort];
+		if(![udpSocket sendData:data toHost:mcuAddress port:mcuPort withTimeout:-1 tag:1])		
 			NSLog(@"Send failed.\n");
 	}
 	

@@ -54,6 +54,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
+						<float key="IBUIValue">255</float>
 						<float key="IBUIMaxValue">255</float>
 					</object>
 					<object class="IBUILabel" id="958030509">
@@ -92,7 +93,12 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">0</string>
+						<string key="IBUIText">255</string>
+						<object class="NSFont" key="IBUIFont" id="927533931">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">17</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<reference key="IBUITextColor" ref="1053809039"/>
 						<reference key="IBUIHighlightedColor" ref="167147128"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -110,6 +116,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
+						<float key="IBUIValue">255</float>
 						<float key="IBUIMaxValue">255</float>
 					</object>
 					<object class="IBUILabel" id="1041261233">
@@ -124,7 +131,8 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">0</string>
+						<string key="IBUIText">255</string>
+						<reference key="IBUIFont" ref="927533931"/>
 						<reference key="IBUITextColor" ref="1053809039"/>
 						<reference key="IBUIHighlightedColor" ref="167147128"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -160,6 +168,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
+						<float key="IBUIValue">255</float>
 						<float key="IBUIMaxValue">255</float>
 					</object>
 					<object class="IBUILabel" id="5992222">
@@ -192,7 +201,8 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">0</string>
+						<string key="IBUIText">255</string>
+						<reference key="IBUIFont" ref="927533931"/>
 						<reference key="IBUITextColor" ref="1053809039"/>
 						<reference key="IBUIHighlightedColor" ref="167147128"/>
 						<int key="IBUIBaselineAdjustment">1</int>

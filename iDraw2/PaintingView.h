@@ -10,6 +10,7 @@
 #import "AsyncUdpSocket.h"
 #import "AppController.h"
 #import <QuartzCore/QuartzCore.h> 
+#import "SingletonData.h"
 
 //CONSTANT
 
@@ -30,19 +31,25 @@
 #define kRightMargin			10.0
 
 //CLASS INTERFACES:
+typedef struct _matrix {
+    BOOL Red[8][8];
+    BOOL Green[8][8];
+    BOOL Blue[8][8];
+} matrix;
 
 @interface PaintingView : UIView <NSNetServiceDelegate, NSNetServiceBrowserDelegate> 
 {
 @private
-    BOOL matrixRed[8][8];
-    BOOL matrixGreen[8][8];
-    BOOL matrixBlue[8][8];
-    BOOL needsErase;
+    matrix matrixData;
+    matrix matrixBackup;
+    BOOL firstSend;
     NSNumber *redSelected;
     NSNumber *greenSelected;
     NSNumber *blueSelected;
     
     NSInteger touchesMovedCount;
+    
+    SingletonData *s;
     AsyncUdpSocket *udpSocket;
     NSNetServiceBrowser *serviceBrowser;
     NSMutableArray *netServices; 
@@ -51,9 +58,8 @@
     int mcuPort;
 }
 
-@property (readwrite) BOOL matrixRed;
-@property (readwrite) BOOL matrixGreen;
-@property (readwrite) BOOL matrixBlue;
+@property (readwrite) BOOL matrixData;
+@property (readwrite) BOOL matrixBackup;
 
 @property (nonatomic, retain) NSNumber *redSelected;
 @property (nonatomic, retain) NSNumber *greenSelected;
