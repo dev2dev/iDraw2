@@ -7,225 +7,266 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB51BDD0135E0D8F00230A37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDCF135E0D8F00230A37 /* UIKit.framework */; };
-		CB51BDD2135E0D8F00230A37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD1135E0D8F00230A37 /* Foundation.framework */; };
-		CB51BDD4135E0D8F00230A37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */; };
-		CB51BDDA135E0D8F00230A37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDD8135E0D8F00230A37 /* InfoPlist.strings */; };
-		CB51BDDD135E0D8F00230A37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDDC135E0D8F00230A37 /* main.m */; };
-		CB51BDEA135E0D9000230A37 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDCF135E0D8F00230A37 /* UIKit.framework */; };
-		CB51BDEB135E0D9000230A37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD1135E0D8F00230A37 /* Foundation.framework */; };
-		CB51BDEC135E0D9000230A37 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */; };
-		CB51BDF4135E0D9000230A37 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDF2135E0D9000230A37 /* InfoPlist.strings */; };
-		CB51BDF7135E0D9000230A37 /* iDraw2Tests.h in Resources */ = {isa = PBXBuildFile; fileRef = CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */; };
-		CB51BDF9135E0D9000230A37 /* iDraw2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */; };
-		CB51BE10135E0E1300230A37 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE09135E0E1300230A37 /* AppController.m */; };
-		CB51BE11135E0E1300230A37 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0A135E0E1300230A37 /* AsyncSocket.m */; };
-		CB51BE12135E0E1300230A37 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0B135E0E1300230A37 /* AsyncUdpSocket.m */; };
-		CB51BE13135E0E1300230A37 /* PaintingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0C135E0E1300230A37 /* PaintingView.m */; };
-		CB51BE14135E0E1300230A37 /* PaintingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0D135E0E1300230A37 /* PaintingWindow.m */; };
-		CB51BE15135E0E1300230A37 /* QuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0E135E0E1300230A37 /* QuartzView.m */; };
-		CB51BE16135E0E1300230A37 /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = CB51BE0F135E0E1300230A37 /* SoundEffect.m */; };
-		CB51BE20135E0E3E00230A37 /* blackbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE17135E0E3E00230A37 /* blackbackground.jpg */; };
-		CB51BE21135E0E3E00230A37 /* whitebackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE18135E0E3E00230A37 /* whitebackground.jpg */; };
-		CB51BE22135E0E3E00230A37 /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE19135E0E3E00230A37 /* Blue.png */; };
-		CB51BE23135E0E3E00230A37 /* Cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1A135E0E3E00230A37 /* Cyan.png */; };
-		CB51BE24135E0E3E00230A37 /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1B135E0E3E00230A37 /* Green.png */; };
-		CB51BE25135E0E3E00230A37 /* Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1C135E0E3E00230A37 /* Purple.png */; };
-		CB51BE26135E0E3E00230A37 /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1D135E0E3E00230A37 /* Red.png */; };
-		CB51BE27135E0E3E00230A37 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1E135E0E3E00230A37 /* White.png */; };
-		CB51BE28135E0E3E00230A37 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE1F135E0E3E00230A37 /* Yellow.png */; };
-		CB51BE2C135E0E5700230A37 /* Erase.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE2A135E0E5700230A37 /* Erase.caf */; };
-		CB51BE2D135E0E5700230A37 /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE2B135E0E5700230A37 /* Select.caf */; };
-		CB51BE2F135E0E7300230A37 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BE2E135E0E7300230A37 /* CFNetwork.framework */; };
-		CB51BE31135E0E8200230A37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BE30135E0E8200230A37 /* QuartzCore.framework */; };
-		CB51BE33135E0E9200230A37 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB51BE32135E0E9200230A37 /* AudioToolbox.framework */; };
-		CB51BE36135E0EDC00230A37 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB51BE34135E0EDC00230A37 /* MainWindow.xib */; };
+		CB4D291D1373132F009AAD31 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4D29171373132F009AAD31 /* AsyncUdpSocket.m */; };
+		CB4D291E1373132F009AAD31 /* ColorSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4D29181373132F009AAD31 /* ColorSliderViewController.m */; };
+		CB4D29201373132F009AAD31 /* PaintingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4D291A1373132F009AAD31 /* PaintingView.m */; };
+		CB4D29211373132F009AAD31 /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4D291B1373132F009AAD31 /* SoundEffect.m */; };
+		CB4D29231373137E009AAD31 /* ColorSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB4D29221373137E009AAD31 /* ColorSliderViewController.xib */; };
+		CB4D292F137313AB009AAD31 /* Erase.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB4D2924137313AB009AAD31 /* Erase.caf */; };
+		CB4D2930137313AB009AAD31 /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB4D2925137313AB009AAD31 /* Select.caf */; };
+		CB4D2931137313AB009AAD31 /* blackbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB4D2926137313AB009AAD31 /* blackbackground.jpg */; };
+		CB4D2932137313AB009AAD31 /* whitebackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB4D2927137313AB009AAD31 /* whitebackground.jpg */; };
+		CB4D2933137313AB009AAD31 /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4D2928137313AB009AAD31 /* Blue.png */; };
+		CB4D2934137313AB009AAD31 /* Cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4D2929137313AB009AAD31 /* Cyan.png */; };
+		CB4D2935137313AB009AAD31 /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4D292A137313AB009AAD31 /* Green.png */; };
+		CB4D2936137313AB009AAD31 /* Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4D292B137313AB009AAD31 /* Purple.png */; };
+		CB4D2937137313AB009AAD31 /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4D292C137313AB009AAD31 /* Red.png */; };
+		CB4D2938137313AB009AAD31 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4D292D137313AB009AAD31 /* White.png */; };
+		CB4D2939137313AB009AAD31 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4D292E137313AB009AAD31 /* Yellow.png */; };
+		CBAE5B101373030C004A2130 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B0F1373030C004A2130 /* UIKit.framework */; };
+		CBAE5B121373030C004A2130 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B111373030C004A2130 /* Foundation.framework */; };
+		CBAE5B141373030C004A2130 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B131373030C004A2130 /* CoreGraphics.framework */; };
+		CBAE5B1A1373030C004A2130 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBAE5B181373030C004A2130 /* InfoPlist.strings */; };
+		CBAE5B1D1373030C004A2130 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE5B1C1373030C004A2130 /* main.m */; };
+		CBAE5B201373030C004A2130 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE5B1F1373030C004A2130 /* AppController.m */; };
+		CBAE5B231373030C004A2130 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAE5B211373030C004A2130 /* MainWindow.xib */; };
+		CBAE5B2A1373030C004A2130 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B0F1373030C004A2130 /* UIKit.framework */; };
+		CBAE5B2B1373030C004A2130 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B111373030C004A2130 /* Foundation.framework */; };
+		CBAE5B2C1373030C004A2130 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B131373030C004A2130 /* CoreGraphics.framework */; };
+		CBAE5B341373030C004A2130 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBAE5B321373030C004A2130 /* InfoPlist.strings */; };
+		CBAE5B371373030C004A2130 /* iDraw2Tests.h in Resources */ = {isa = PBXBuildFile; fileRef = CBAE5B361373030C004A2130 /* iDraw2Tests.h */; };
+		CBAE5B391373030C004A2130 /* iDraw2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE5B381373030C004A2130 /* iDraw2Tests.m */; };
+		CBAE5B471373034F004A2130 /* PaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE5B461373034F004A2130 /* PaintingViewController.m */; };
+		CBAE5B5713730460004A2130 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B5613730460004A2130 /* CFNetwork.framework */; };
+		CBAE5B8513730E6A004A2130 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAE5B8413730E6A004A2130 /* AudioToolbox.framework */; };
+		CBDFAD21137C3A2E00348BD2 /* SingletonData.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDFAD20137C3A2E00348BD2 /* SingletonData.m */; };
+		CBDFAD2B137C458400348BD2 /* blueslider.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDFAD28137C458400348BD2 /* blueslider.png */; };
+		CBDFAD2C137C458400348BD2 /* greenslider.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDFAD29137C458400348BD2 /* greenslider.png */; };
+		CBDFAD2D137C458400348BD2 /* redslider.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDFAD2A137C458400348BD2 /* redslider.png */; };
+		CBDFAD2F137C492A00348BD2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBDFAD2E137C492900348BD2 /* Default@2x.png */; };
+		CBF6B08F1373854F0010056A /* Chat-Bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF6B08E1373854F0010056A /* Chat-Bubble.png */; };
+		CBF6B092137387740010056A /* Magic-Wand.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF6B091137387740010056A /* Magic-Wand.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CB51BDED135E0D9000230A37 /* PBXContainerItemProxy */ = {
+		CBAE5B2D1373030C004A2130 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CB51BDC2135E0D8F00230A37 /* Project object */;
+			containerPortal = CBAE5B021373030C004A2130 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CB51BDCA135E0D8F00230A37;
+			remoteGlobalIDString = CBAE5B0A1373030C004A2130;
 			remoteInfo = iDraw2;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB51BDCB135E0D8F00230A37 /* iDraw2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDraw2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB51BDCF135E0D8F00230A37 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CB51BDD1135E0D8F00230A37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CB51BDD7135E0D8F00230A37 /* iDraw2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDraw2-Info.plist"; sourceTree = "<group>"; };
-		CB51BDD9135E0D8F00230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB51BDDB135E0D8F00230A37 /* iDraw2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDraw2-Prefix.pch"; sourceTree = "<group>"; };
-		CB51BDDC135E0D8F00230A37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CB51BDE9135E0D9000230A37 /* iDraw2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDraw2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB51BDF1135E0D9000230A37 /* iDraw2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDraw2Tests-Info.plist"; sourceTree = "<group>"; };
-		CB51BDF3135E0D9000230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB51BDF5135E0D9000230A37 /* iDraw2Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDraw2Tests-Prefix.pch"; sourceTree = "<group>"; };
-		CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDraw2Tests.h; sourceTree = "<group>"; };
-		CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDraw2Tests.m; sourceTree = "<group>"; };
-		CB51BE02135E0E0800230A37 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
-		CB51BE03135E0E0800230A37 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		CB51BE04135E0E0800230A37 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
-		CB51BE05135E0E0800230A37 /* PaintingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintingView.h; sourceTree = "<group>"; };
-		CB51BE06135E0E0800230A37 /* PaintingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintingWindow.h; sourceTree = "<group>"; };
-		CB51BE07135E0E0800230A37 /* QuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzView.h; sourceTree = "<group>"; };
-		CB51BE08135E0E0800230A37 /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffect.h; sourceTree = "<group>"; };
-		CB51BE09135E0E1300230A37 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		CB51BE0A135E0E1300230A37 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
-		CB51BE0B135E0E1300230A37 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
-		CB51BE0C135E0E1300230A37 /* PaintingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintingView.m; sourceTree = "<group>"; };
-		CB51BE0D135E0E1300230A37 /* PaintingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintingWindow.m; sourceTree = "<group>"; };
-		CB51BE0E135E0E1300230A37 /* QuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzView.m; sourceTree = "<group>"; };
-		CB51BE0F135E0E1300230A37 /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffect.m; sourceTree = "<group>"; };
-		CB51BE17135E0E3E00230A37 /* blackbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackbackground.jpg; sourceTree = "<group>"; };
-		CB51BE18135E0E3E00230A37 /* whitebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whitebackground.jpg; sourceTree = "<group>"; };
-		CB51BE19135E0E3E00230A37 /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
-		CB51BE1A135E0E3E00230A37 /* Cyan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cyan.png; sourceTree = "<group>"; };
-		CB51BE1B135E0E3E00230A37 /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
-		CB51BE1C135E0E3E00230A37 /* Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Purple.png; sourceTree = "<group>"; };
-		CB51BE1D135E0E3E00230A37 /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
-		CB51BE1E135E0E3E00230A37 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
-		CB51BE1F135E0E3E00230A37 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
-		CB51BE2A135E0E5700230A37 /* Erase.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Erase.caf; sourceTree = "<group>"; };
-		CB51BE2B135E0E5700230A37 /* Select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Select.caf; sourceTree = "<group>"; };
-		CB51BE2E135E0E7300230A37 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		CB51BE30135E0E8200230A37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CB51BE32135E0E9200230A37 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		CB51BE35135E0EDC00230A37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CB4D291013731327009AAD31 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = iDraw2/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		CB4D291113731327009AAD31 /* ColorSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorSliderViewController.h; path = iDraw2/ColorSliderViewController.h; sourceTree = "<group>"; };
+		CB4D291213731327009AAD31 /* PaintingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaintingView.h; path = iDraw2/PaintingView.h; sourceTree = "<group>"; };
+		CB4D291313731327009AAD31 /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffect.h; sourceTree = "<group>"; };
+		CB4D29171373132F009AAD31 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = iDraw2/AsyncUdpSocket.m; sourceTree = "<group>"; };
+		CB4D29181373132F009AAD31 /* ColorSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorSliderViewController.m; path = iDraw2/ColorSliderViewController.m; sourceTree = "<group>"; };
+		CB4D291A1373132F009AAD31 /* PaintingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaintingView.m; path = iDraw2/PaintingView.m; sourceTree = "<group>"; };
+		CB4D291B1373132F009AAD31 /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffect.m; sourceTree = "<group>"; };
+		CB4D29221373137E009AAD31 /* ColorSliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorSliderViewController.xib; path = iDraw2/ColorSliderViewController.xib; sourceTree = "<group>"; };
+		CB4D2924137313AB009AAD31 /* Erase.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Erase.caf; path = iDraw2/Resource/Erase.caf; sourceTree = "<group>"; };
+		CB4D2925137313AB009AAD31 /* Select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Select.caf; path = iDraw2/Resource/Select.caf; sourceTree = "<group>"; };
+		CB4D2926137313AB009AAD31 /* blackbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blackbackground.jpg; path = iDraw2/Resource/blackbackground.jpg; sourceTree = "<group>"; };
+		CB4D2927137313AB009AAD31 /* whitebackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = whitebackground.jpg; path = iDraw2/Resource/whitebackground.jpg; sourceTree = "<group>"; };
+		CB4D2928137313AB009AAD31 /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Blue.png; path = iDraw2/Resource/Blue.png; sourceTree = "<group>"; };
+		CB4D2929137313AB009AAD31 /* Cyan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cyan.png; path = iDraw2/Resource/Cyan.png; sourceTree = "<group>"; };
+		CB4D292A137313AB009AAD31 /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Green.png; path = iDraw2/Resource/Green.png; sourceTree = "<group>"; };
+		CB4D292B137313AB009AAD31 /* Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Purple.png; path = iDraw2/Resource/Purple.png; sourceTree = "<group>"; };
+		CB4D292C137313AB009AAD31 /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Red.png; path = iDraw2/Resource/Red.png; sourceTree = "<group>"; };
+		CB4D292D137313AB009AAD31 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = White.png; path = iDraw2/Resource/White.png; sourceTree = "<group>"; };
+		CB4D292E137313AB009AAD31 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Yellow.png; path = iDraw2/Resource/Yellow.png; sourceTree = "<group>"; };
+		CBAE5B0B1373030C004A2130 /* iDraw2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDraw2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBAE5B0F1373030C004A2130 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CBAE5B111373030C004A2130 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CBAE5B131373030C004A2130 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CBAE5B171373030C004A2130 /* iDraw2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDraw2-Info.plist"; sourceTree = "<group>"; };
+		CBAE5B191373030C004A2130 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CBAE5B1B1373030C004A2130 /* iDraw2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDraw2-Prefix.pch"; sourceTree = "<group>"; };
+		CBAE5B1C1373030C004A2130 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBAE5B1E1373030C004A2130 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		CBAE5B1F1373030C004A2130 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		CBAE5B221373030C004A2130 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CBAE5B291373030C004A2130 /* iDraw2Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iDraw2Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBAE5B311373030C004A2130 /* iDraw2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iDraw2Tests-Info.plist"; sourceTree = "<group>"; };
+		CBAE5B331373030C004A2130 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CBAE5B351373030C004A2130 /* iDraw2Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iDraw2Tests-Prefix.pch"; sourceTree = "<group>"; };
+		CBAE5B361373030C004A2130 /* iDraw2Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iDraw2Tests.h; sourceTree = "<group>"; };
+		CBAE5B381373030C004A2130 /* iDraw2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iDraw2Tests.m; sourceTree = "<group>"; };
+		CBAE5B451373034F004A2130 /* PaintingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaintingViewController.h; path = iDraw2.xcodeproj/PaintingViewController.h; sourceTree = "<group>"; };
+		CBAE5B461373034F004A2130 /* PaintingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaintingViewController.m; path = iDraw2.xcodeproj/PaintingViewController.m; sourceTree = "<group>"; };
+		CBAE5B5613730460004A2130 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CBAE5B8413730E6A004A2130 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CBDFAD1F137C3A2E00348BD2 /* SingletonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonData.h; sourceTree = "<group>"; };
+		CBDFAD20137C3A2E00348BD2 /* SingletonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonData.m; sourceTree = "<group>"; };
+		CBDFAD28137C458400348BD2 /* blueslider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueslider.png; path = iDraw2/Resource/blueslider.png; sourceTree = "<group>"; };
+		CBDFAD29137C458400348BD2 /* greenslider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenslider.png; path = iDraw2/Resource/greenslider.png; sourceTree = "<group>"; };
+		CBDFAD2A137C458400348BD2 /* redslider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redslider.png; path = iDraw2/Resource/redslider.png; sourceTree = "<group>"; };
+		CBDFAD2E137C492900348BD2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CBF6B08E1373854F0010056A /* Chat-Bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chat-Bubble.png"; sourceTree = "<group>"; };
+		CBF6B091137387740010056A /* Magic-Wand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Magic-Wand.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CB51BDC8135E0D8F00230A37 /* Frameworks */ = {
+		CBAE5B081373030C004A2130 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB51BE33135E0E9200230A37 /* AudioToolbox.framework in Frameworks */,
-				CB51BE31135E0E8200230A37 /* QuartzCore.framework in Frameworks */,
-				CB51BE2F135E0E7300230A37 /* CFNetwork.framework in Frameworks */,
-				CB51BDD0135E0D8F00230A37 /* UIKit.framework in Frameworks */,
-				CB51BDD2135E0D8F00230A37 /* Foundation.framework in Frameworks */,
-				CB51BDD4135E0D8F00230A37 /* CoreGraphics.framework in Frameworks */,
+				CBAE5B8513730E6A004A2130 /* AudioToolbox.framework in Frameworks */,
+				CBAE5B5713730460004A2130 /* CFNetwork.framework in Frameworks */,
+				CBAE5B101373030C004A2130 /* UIKit.framework in Frameworks */,
+				CBAE5B121373030C004A2130 /* Foundation.framework in Frameworks */,
+				CBAE5B141373030C004A2130 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB51BDE5135E0D9000230A37 /* Frameworks */ = {
+		CBAE5B251373030C004A2130 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB51BDEA135E0D9000230A37 /* UIKit.framework in Frameworks */,
-				CB51BDEB135E0D9000230A37 /* Foundation.framework in Frameworks */,
-				CB51BDEC135E0D9000230A37 /* CoreGraphics.framework in Frameworks */,
+				CBAE5B2A1373030C004A2130 /* UIKit.framework in Frameworks */,
+				CBAE5B2B1373030C004A2130 /* Foundation.framework in Frameworks */,
+				CBAE5B2C1373030C004A2130 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CB51BDC0135E0D8F00230A37 = {
+		CBAE5B001373030C004A2130 = {
 			isa = PBXGroup;
 			children = (
-				CB51BDD5135E0D8F00230A37 /* iDraw2 */,
-				CB51BDEF135E0D9000230A37 /* iDraw2Tests */,
-				CB51BDCE135E0D8F00230A37 /* Frameworks */,
-				CB51BDCC135E0D8F00230A37 /* Products */,
+				CBDFAD2E137C492900348BD2 /* Default@2x.png */,
+				CBAE5B6913730B6F004A2130 /* NetworkClass */,
+				CBAE5B6813730A2B004A2130 /* ColorSliderViewController */,
+				CBAE5B6713730A15004A2130 /* PaintingViewController */,
+				CBAE5B8013730BE7004A2130 /* Resource */,
+				CBAE5B151373030C004A2130 /* iDraw2 */,
+				CBAE5B2F1373030C004A2130 /* iDraw2Tests */,
+				CBAE5B0E1373030C004A2130 /* Frameworks */,
+				CBAE5B0C1373030C004A2130 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CB51BDCC135E0D8F00230A37 /* Products */ = {
+		CBAE5B0C1373030C004A2130 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BDCB135E0D8F00230A37 /* iDraw2.app */,
-				CB51BDE9135E0D9000230A37 /* iDraw2Tests.octest */,
+				CBAE5B0B1373030C004A2130 /* iDraw2.app */,
+				CBAE5B291373030C004A2130 /* iDraw2Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB51BDCE135E0D8F00230A37 /* Frameworks */ = {
+		CBAE5B0E1373030C004A2130 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BE32135E0E9200230A37 /* AudioToolbox.framework */,
-				CB51BE30135E0E8200230A37 /* QuartzCore.framework */,
-				CB51BE2E135E0E7300230A37 /* CFNetwork.framework */,
-				CB51BDCF135E0D8F00230A37 /* UIKit.framework */,
-				CB51BDD1135E0D8F00230A37 /* Foundation.framework */,
-				CB51BDD3135E0D8F00230A37 /* CoreGraphics.framework */,
+				CBAE5B8413730E6A004A2130 /* AudioToolbox.framework */,
+				CBAE5B5613730460004A2130 /* CFNetwork.framework */,
+				CBAE5B0F1373030C004A2130 /* UIKit.framework */,
+				CBAE5B111373030C004A2130 /* Foundation.framework */,
+				CBAE5B131373030C004A2130 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CB51BDD5135E0D8F00230A37 /* iDraw2 */ = {
+		CBAE5B151373030C004A2130 /* iDraw2 */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BE29135E0E4200230A37 /* Resource */,
-				CB51BE09135E0E1300230A37 /* AppController.m */,
-				CB51BE0A135E0E1300230A37 /* AsyncSocket.m */,
-				CB51BE0B135E0E1300230A37 /* AsyncUdpSocket.m */,
-				CB51BE0C135E0E1300230A37 /* PaintingView.m */,
-				CB51BE0D135E0E1300230A37 /* PaintingWindow.m */,
-				CB51BE0E135E0E1300230A37 /* QuartzView.m */,
-				CB51BE0F135E0E1300230A37 /* SoundEffect.m */,
-				CB51BE02135E0E0800230A37 /* AppController.h */,
-				CB51BE03135E0E0800230A37 /* AsyncSocket.h */,
-				CB51BE04135E0E0800230A37 /* AsyncUdpSocket.h */,
-				CB51BE05135E0E0800230A37 /* PaintingView.h */,
-				CB51BE06135E0E0800230A37 /* PaintingWindow.h */,
-				CB51BE07135E0E0800230A37 /* QuartzView.h */,
-				CB51BE08135E0E0800230A37 /* SoundEffect.h */,
-				CB51BDD6135E0D8F00230A37 /* Supporting Files */,
+				CB4D291B1373132F009AAD31 /* SoundEffect.m */,
+				CB4D291313731327009AAD31 /* SoundEffect.h */,
+				CBAE5B1E1373030C004A2130 /* AppController.h */,
+				CBAE5B1F1373030C004A2130 /* AppController.m */,
+				CBAE5B211373030C004A2130 /* MainWindow.xib */,
+				CBAE5B161373030C004A2130 /* Supporting Files */,
 			);
 			path = iDraw2;
 			sourceTree = "<group>";
 		};
-		CB51BDD6135E0D8F00230A37 /* Supporting Files */ = {
+		CBAE5B161373030C004A2130 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BDD7135E0D8F00230A37 /* iDraw2-Info.plist */,
-				CB51BDD8135E0D8F00230A37 /* InfoPlist.strings */,
-				CB51BDDB135E0D8F00230A37 /* iDraw2-Prefix.pch */,
-				CB51BDDC135E0D8F00230A37 /* main.m */,
+				CBAE5B171373030C004A2130 /* iDraw2-Info.plist */,
+				CBAE5B181373030C004A2130 /* InfoPlist.strings */,
+				CBAE5B1B1373030C004A2130 /* iDraw2-Prefix.pch */,
+				CBAE5B1C1373030C004A2130 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CB51BDEF135E0D9000230A37 /* iDraw2Tests */ = {
+		CBAE5B2F1373030C004A2130 /* iDraw2Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BDF6135E0D9000230A37 /* iDraw2Tests.h */,
-				CB51BDF8135E0D9000230A37 /* iDraw2Tests.m */,
-				CB51BDF0135E0D9000230A37 /* Supporting Files */,
+				CBAE5B361373030C004A2130 /* iDraw2Tests.h */,
+				CBAE5B381373030C004A2130 /* iDraw2Tests.m */,
+				CBAE5B301373030C004A2130 /* Supporting Files */,
 			);
 			path = iDraw2Tests;
 			sourceTree = "<group>";
 		};
-		CB51BDF0135E0D9000230A37 /* Supporting Files */ = {
+		CBAE5B301373030C004A2130 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BDF1135E0D9000230A37 /* iDraw2Tests-Info.plist */,
-				CB51BDF2135E0D9000230A37 /* InfoPlist.strings */,
-				CB51BDF5135E0D9000230A37 /* iDraw2Tests-Prefix.pch */,
+				CBAE5B311373030C004A2130 /* iDraw2Tests-Info.plist */,
+				CBAE5B321373030C004A2130 /* InfoPlist.strings */,
+				CBAE5B351373030C004A2130 /* iDraw2Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CB51BE29135E0E4200230A37 /* Resource */ = {
+		CBAE5B6713730A15004A2130 /* PaintingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CB51BE34135E0EDC00230A37 /* MainWindow.xib */,
-				CB51BE2A135E0E5700230A37 /* Erase.caf */,
-				CB51BE2B135E0E5700230A37 /* Select.caf */,
-				CB51BE17135E0E3E00230A37 /* blackbackground.jpg */,
-				CB51BE18135E0E3E00230A37 /* whitebackground.jpg */,
-				CB51BE19135E0E3E00230A37 /* Blue.png */,
-				CB51BE1A135E0E3E00230A37 /* Cyan.png */,
-				CB51BE1B135E0E3E00230A37 /* Green.png */,
-				CB51BE1C135E0E3E00230A37 /* Purple.png */,
-				CB51BE1D135E0E3E00230A37 /* Red.png */,
-				CB51BE1E135E0E3E00230A37 /* White.png */,
-				CB51BE1F135E0E3E00230A37 /* Yellow.png */,
+				CBAE5B451373034F004A2130 /* PaintingViewController.h */,
+				CBAE5B461373034F004A2130 /* PaintingViewController.m */,
+				CB4D291213731327009AAD31 /* PaintingView.h */,
+				CB4D291A1373132F009AAD31 /* PaintingView.m */,
+			);
+			name = PaintingViewController;
+			sourceTree = "<group>";
+		};
+		CBAE5B6813730A2B004A2130 /* ColorSliderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CBDFAD28137C458400348BD2 /* blueslider.png */,
+				CBDFAD29137C458400348BD2 /* greenslider.png */,
+				CBDFAD2A137C458400348BD2 /* redslider.png */,
+				CB4D291113731327009AAD31 /* ColorSliderViewController.h */,
+				CB4D29181373132F009AAD31 /* ColorSliderViewController.m */,
+				CB4D29221373137E009AAD31 /* ColorSliderViewController.xib */,
+			);
+			name = ColorSliderViewController;
+			sourceTree = "<group>";
+		};
+		CBAE5B6913730B6F004A2130 /* NetworkClass */ = {
+			isa = PBXGroup;
+			children = (
+				CB4D291013731327009AAD31 /* AsyncUdpSocket.h */,
+				CB4D29171373132F009AAD31 /* AsyncUdpSocket.m */,
+				CBDFAD1F137C3A2E00348BD2 /* SingletonData.h */,
+				CBDFAD20137C3A2E00348BD2 /* SingletonData.m */,
+			);
+			name = NetworkClass;
+			sourceTree = "<group>";
+		};
+		CBAE5B8013730BE7004A2130 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B091137387740010056A /* Magic-Wand.png */,
+				CBF6B08E1373854F0010056A /* Chat-Bubble.png */,
+				CB4D2924137313AB009AAD31 /* Erase.caf */,
+				CB4D2925137313AB009AAD31 /* Select.caf */,
+				CB4D2926137313AB009AAD31 /* blackbackground.jpg */,
+				CB4D2927137313AB009AAD31 /* whitebackground.jpg */,
+				CB4D2928137313AB009AAD31 /* Blue.png */,
+				CB4D2929137313AB009AAD31 /* Cyan.png */,
+				CB4D292A137313AB009AAD31 /* Green.png */,
+				CB4D292B137313AB009AAD31 /* Purple.png */,
+				CB4D292C137313AB009AAD31 /* Red.png */,
+				CB4D292D137313AB009AAD31 /* White.png */,
+				CB4D292E137313AB009AAD31 /* Yellow.png */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -233,13 +274,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CB51BDCA135E0D8F00230A37 /* iDraw2 */ = {
+		CBAE5B0A1373030C004A2130 /* iDraw2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB51BDFC135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2" */;
+			buildConfigurationList = CBAE5B3C1373030C004A2130 /* Build configuration list for PBXNativeTarget "iDraw2" */;
 			buildPhases = (
-				CB51BDC7135E0D8F00230A37 /* Sources */,
-				CB51BDC8135E0D8F00230A37 /* Frameworks */,
-				CB51BDC9135E0D8F00230A37 /* Resources */,
+				CBAE5B071373030C004A2130 /* Sources */,
+				CBAE5B081373030C004A2130 /* Frameworks */,
+				CBAE5B091373030C004A2130 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -247,85 +288,92 @@
 			);
 			name = iDraw2;
 			productName = iDraw2;
-			productReference = CB51BDCB135E0D8F00230A37 /* iDraw2.app */;
+			productReference = CBAE5B0B1373030C004A2130 /* iDraw2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB51BDE8135E0D9000230A37 /* iDraw2Tests */ = {
+		CBAE5B281373030C004A2130 /* iDraw2Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB51BDFF135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2Tests" */;
+			buildConfigurationList = CBAE5B3F1373030C004A2130 /* Build configuration list for PBXNativeTarget "iDraw2Tests" */;
 			buildPhases = (
-				CB51BDE4135E0D9000230A37 /* Sources */,
-				CB51BDE5135E0D9000230A37 /* Frameworks */,
-				CB51BDE6135E0D9000230A37 /* Resources */,
-				CB51BDE7135E0D9000230A37 /* ShellScript */,
+				CBAE5B241373030C004A2130 /* Sources */,
+				CBAE5B251373030C004A2130 /* Frameworks */,
+				CBAE5B261373030C004A2130 /* Resources */,
+				CBAE5B271373030C004A2130 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CB51BDEE135E0D9000230A37 /* PBXTargetDependency */,
+				CBAE5B2E1373030C004A2130 /* PBXTargetDependency */,
 			);
 			name = iDraw2Tests;
 			productName = iDraw2Tests;
-			productReference = CB51BDE9135E0D9000230A37 /* iDraw2Tests.octest */;
+			productReference = CBAE5B291373030C004A2130 /* iDraw2Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CB51BDC2135E0D8F00230A37 /* Project object */ = {
+		CBAE5B021373030C004A2130 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = CB51BDC5135E0D8F00230A37 /* Build configuration list for PBXProject "iDraw2" */;
+			buildConfigurationList = CBAE5B051373030C004A2130 /* Build configuration list for PBXProject "iDraw2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = CB51BDC0135E0D8F00230A37;
-			productRefGroup = CB51BDCC135E0D8F00230A37 /* Products */;
+			mainGroup = CBAE5B001373030C004A2130;
+			productRefGroup = CBAE5B0C1373030C004A2130 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CB51BDCA135E0D8F00230A37 /* iDraw2 */,
-				CB51BDE8135E0D9000230A37 /* iDraw2Tests */,
+				CBAE5B0A1373030C004A2130 /* iDraw2 */,
+				CBAE5B281373030C004A2130 /* iDraw2Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CB51BDC9135E0D8F00230A37 /* Resources */ = {
+		CBAE5B091373030C004A2130 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB51BDDA135E0D8F00230A37 /* InfoPlist.strings in Resources */,
-				CB51BE20135E0E3E00230A37 /* blackbackground.jpg in Resources */,
-				CB51BE21135E0E3E00230A37 /* whitebackground.jpg in Resources */,
-				CB51BE22135E0E3E00230A37 /* Blue.png in Resources */,
-				CB51BE23135E0E3E00230A37 /* Cyan.png in Resources */,
-				CB51BE24135E0E3E00230A37 /* Green.png in Resources */,
-				CB51BE25135E0E3E00230A37 /* Purple.png in Resources */,
-				CB51BE26135E0E3E00230A37 /* Red.png in Resources */,
-				CB51BE27135E0E3E00230A37 /* White.png in Resources */,
-				CB51BE28135E0E3E00230A37 /* Yellow.png in Resources */,
-				CB51BE2C135E0E5700230A37 /* Erase.caf in Resources */,
-				CB51BE2D135E0E5700230A37 /* Select.caf in Resources */,
-				CB51BE36135E0EDC00230A37 /* MainWindow.xib in Resources */,
+				CBAE5B1A1373030C004A2130 /* InfoPlist.strings in Resources */,
+				CBAE5B231373030C004A2130 /* MainWindow.xib in Resources */,
+				CB4D29231373137E009AAD31 /* ColorSliderViewController.xib in Resources */,
+				CB4D292F137313AB009AAD31 /* Erase.caf in Resources */,
+				CB4D2930137313AB009AAD31 /* Select.caf in Resources */,
+				CB4D2931137313AB009AAD31 /* blackbackground.jpg in Resources */,
+				CB4D2932137313AB009AAD31 /* whitebackground.jpg in Resources */,
+				CB4D2933137313AB009AAD31 /* Blue.png in Resources */,
+				CB4D2934137313AB009AAD31 /* Cyan.png in Resources */,
+				CB4D2935137313AB009AAD31 /* Green.png in Resources */,
+				CB4D2936137313AB009AAD31 /* Purple.png in Resources */,
+				CB4D2937137313AB009AAD31 /* Red.png in Resources */,
+				CB4D2938137313AB009AAD31 /* White.png in Resources */,
+				CB4D2939137313AB009AAD31 /* Yellow.png in Resources */,
+				CBF6B08F1373854F0010056A /* Chat-Bubble.png in Resources */,
+				CBF6B092137387740010056A /* Magic-Wand.png in Resources */,
+				CBDFAD2B137C458400348BD2 /* blueslider.png in Resources */,
+				CBDFAD2C137C458400348BD2 /* greenslider.png in Resources */,
+				CBDFAD2D137C458400348BD2 /* redslider.png in Resources */,
+				CBDFAD2F137C492A00348BD2 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB51BDE6135E0D9000230A37 /* Resources */ = {
+		CBAE5B261373030C004A2130 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB51BDF4135E0D9000230A37 /* InfoPlist.strings in Resources */,
-				CB51BDF7135E0D9000230A37 /* iDraw2Tests.h in Resources */,
+				CBAE5B341373030C004A2130 /* InfoPlist.strings in Resources */,
+				CBAE5B371373030C004A2130 /* iDraw2Tests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CB51BDE7135E0D9000230A37 /* ShellScript */ = {
+		CBAE5B271373030C004A2130 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,68 +389,68 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CB51BDC7135E0D8F00230A37 /* Sources */ = {
+		CBAE5B071373030C004A2130 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB51BDDD135E0D8F00230A37 /* main.m in Sources */,
-				CB51BE10135E0E1300230A37 /* AppController.m in Sources */,
-				CB51BE11135E0E1300230A37 /* AsyncSocket.m in Sources */,
-				CB51BE12135E0E1300230A37 /* AsyncUdpSocket.m in Sources */,
-				CB51BE13135E0E1300230A37 /* PaintingView.m in Sources */,
-				CB51BE14135E0E1300230A37 /* PaintingWindow.m in Sources */,
-				CB51BE15135E0E1300230A37 /* QuartzView.m in Sources */,
-				CB51BE16135E0E1300230A37 /* SoundEffect.m in Sources */,
+				CBAE5B1D1373030C004A2130 /* main.m in Sources */,
+				CBAE5B201373030C004A2130 /* AppController.m in Sources */,
+				CBAE5B471373034F004A2130 /* PaintingViewController.m in Sources */,
+				CB4D291D1373132F009AAD31 /* AsyncUdpSocket.m in Sources */,
+				CB4D291E1373132F009AAD31 /* ColorSliderViewController.m in Sources */,
+				CB4D29201373132F009AAD31 /* PaintingView.m in Sources */,
+				CB4D29211373132F009AAD31 /* SoundEffect.m in Sources */,
+				CBDFAD21137C3A2E00348BD2 /* SingletonData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB51BDE4135E0D9000230A37 /* Sources */ = {
+		CBAE5B241373030C004A2130 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB51BDF9135E0D9000230A37 /* iDraw2Tests.m in Sources */,
+				CBAE5B391373030C004A2130 /* iDraw2Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CB51BDEE135E0D9000230A37 /* PBXTargetDependency */ = {
+		CBAE5B2E1373030C004A2130 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CB51BDCA135E0D8F00230A37 /* iDraw2 */;
-			targetProxy = CB51BDED135E0D9000230A37 /* PBXContainerItemProxy */;
+			target = CBAE5B0A1373030C004A2130 /* iDraw2 */;
+			targetProxy = CBAE5B2D1373030C004A2130 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CB51BDD8135E0D8F00230A37 /* InfoPlist.strings */ = {
+		CBAE5B181373030C004A2130 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CB51BDD9135E0D8F00230A37 /* en */,
+				CBAE5B191373030C004A2130 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CB51BDF2135E0D9000230A37 /* InfoPlist.strings */ = {
+		CBAE5B211373030C004A2130 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CB51BDF3135E0D9000230A37 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CB51BE34135E0EDC00230A37 /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB51BE35135E0EDC00230A37 /* en */,
+				CBAE5B221373030C004A2130 /* en */,
 			);
 			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		CBAE5B321373030C004A2130 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBAE5B331373030C004A2130 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CB51BDFA135E0D9000230A37 /* Debug */ = {
+		CBAE5B3A1373030C004A2130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -414,12 +462,12 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		CB51BDFB135E0D9000230A37 /* Release */ = {
+		CBAE5B3B1373030C004A2130 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -428,13 +476,13 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
-		CB51BDFD135E0D9000230A37 /* Debug */ = {
+		CBAE5B3D1373030C004A2130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -449,7 +497,7 @@
 			};
 			name = Debug;
 		};
-		CB51BDFE135E0D9000230A37 /* Release */ = {
+		CBAE5B3E1373030C004A2130 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -464,7 +512,7 @@
 			};
 			name = Release;
 		};
-		CB51BE00135E0D9000230A37 /* Debug */ = {
+		CBAE5B401373030C004A2130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -486,7 +534,7 @@
 			};
 			name = Debug;
 		};
-		CB51BE01135E0D9000230A37 /* Release */ = {
+		CBAE5B411373030C004A2130 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -511,32 +559,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CB51BDC5135E0D8F00230A37 /* Build configuration list for PBXProject "iDraw2" */ = {
+		CBAE5B051373030C004A2130 /* Build configuration list for PBXProject "iDraw2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB51BDFA135E0D9000230A37 /* Debug */,
-				CB51BDFB135E0D9000230A37 /* Release */,
+				CBAE5B3A1373030C004A2130 /* Debug */,
+				CBAE5B3B1373030C004A2130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB51BDFC135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2" */ = {
+		CBAE5B3C1373030C004A2130 /* Build configuration list for PBXNativeTarget "iDraw2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB51BDFD135E0D9000230A37 /* Debug */,
-				CB51BDFE135E0D9000230A37 /* Release */,
+				CBAE5B3D1373030C004A2130 /* Debug */,
+				CBAE5B3E1373030C004A2130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		CB51BDFF135E0D9000230A37 /* Build configuration list for PBXNativeTarget "iDraw2Tests" */ = {
+		CBAE5B3F1373030C004A2130 /* Build configuration list for PBXNativeTarget "iDraw2Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB51BE00135E0D9000230A37 /* Debug */,
-				CB51BE01135E0D9000230A37 /* Release */,
+				CBAE5B401373030C004A2130 /* Debug */,
+				CBAE5B411373030C004A2130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CB51BDC2135E0D8F00230A37 /* Project object */;
+	rootObject = CBAE5B021373030C004A2130 /* Project object */;
 }
