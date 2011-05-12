@@ -146,10 +146,9 @@
 		char *str = inet_ntoa(addy->sin_addr);
 		NSLog(@"%s:%d", str, ntohs(addy->sin_port));
         
-        SingletonData *sl = [SingletonData instance];
-        [sl setIpAddress: str];
-        [sl setPort:ntohs(addy->sin_port)];
-        NSString *amsg = [[NSString alloc] initWithFormat:@"Target Board Found (%@%@local) with IP Address: %@",DESTADDR, DESTSERV, mcuAddress]; 
+        [s setIpAddress: str];
+        [s setPort:ntohs(addy->sin_port)];
+        NSString *amsg = [[NSString alloc] initWithFormat:@"Target Board Found (%@%@local) with IP Address: %s",DESTADDR, DESTSERV, str]; 
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"NetService" message:amsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         [alert release];
